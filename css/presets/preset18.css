@@ -1,0 +1,64 @@
+/*text color*/
+.logo a,
+.phone_number i,
+.input-group-btn>button>i,
+.useful_link ul li:hover,
+.useful_link ul li a:hover,
+.copyright_text p a:hover,
+a.learnmore:hover,
+h1.discount,
+.single_category_item ul li:hover,
+.single_category_item ul li a:hover,
+.post_meta p a:hover,
+.category_widget ul li a:hover,
+.category_widget ul li a:hover i,
+.tag_widget ul li a:hover,
+.readmore a:hover,
+.fa-star,
+.comment_meta p a:hover,
+.our_location ul li a:hover,
+.email_and_web p a:hover,
+.comments_box [type="submit"]:hover,
+.custom_breadcrumb li.active a,
+.login_form label a:hover,
+.login_form form [type="submit"]:hover,
+.submit input:hover,
+.bill_address a:hover, 
+.ship_address a:hover,
+.cupon_box [type="submit"]:hover,
+.single_blog_post a h2:hover,
+.cart_amount p a:hover i,
+.retrieve_option ul li a:hover
+{
+    color: #9882F6;
+}
+
+/* Background color */
+.social_area ul li a i:hover,
+.slider-heading h1,
+.learnmore,
+header nav ul.nav-main li.dropdown:hover>ul .rox-menu-wrapper
+{
+    background-color: #9882F6;
+}
+.selected, .tp-bullets.simplebullets.round .bullet:hover{background-color: #9882F6!important;}
+
+/*border color*/
+.fliker-photo a img:hover
+{
+    border-color: #9882F6;
+}
+
+/*border bottom color*/
+.slider
+{
+    border-bottom-color: #9882F6;
+}
+
+
+/*border Top color*/
+#rox-main-menu li:hover
+{
+    border-top-color:#9882F6;
+}
+

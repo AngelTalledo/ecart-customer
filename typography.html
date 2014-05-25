@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<!--[if gt IE 9]>
+<!-->
+<html>
+<!--
+<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title> Typography - eCart Responsive HTML5 Template </title>
+		<meta name="keywords" content="HTML5 Template"/>
+		<meta name="description" content="eCart Responsive html5 Template">
+		<meta name="author" content="http://themerox.com/">
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="vendors/selectivizr/selectivizr.js">
+		</script>
+		<noscript>
+			<link rel="stylesheet" href="css/iefall-back.css.css" />
+		</noscript>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js">
+		</script>
+		<script src="js/respond.js">
+		</script>
+		<![endif]-->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<!-- Fontawsome -->
+		<link href="css/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+		<!-- PT sans Google web font -->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<!-- Menu CSS -->
+		<link href="css/menu/menu.css" rel="stylesheet" media="screen">
+		<link href="css/menu/menu-config.css" rel="stylesheet" media="screen">
+		<link href="css/menu/menu-responsive.css" rel="stylesheet" media="screen">
+		<!--Theme Panel CSS-->
+		<link href="css/themes_panel.css" rel="stylesheet" media="screen">
+		<!-- revolution CSS --> 
+		<link rel="stylesheet" href="vendors/rs/css/settings.css" type="text/css" />
+		<!-- revolution captions CSS -->
+		<!--prettyPhoto-->
+		<link href="vendors/prettyPhoto/prettyPhoto.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="vendors/rs/css/captions.css" type="text/css" />		
+		<!--End of Page View Css Load for Individual page-->
+		<!--accordion-->
+		<link rel="stylesheet" type="text/css" href="vendors/accordion/liteaccordion.css">
+		<link rel="stylesheet" type="text/css" href="vendors/accordion/accordion.css">
+		<!--Theme css-->
+		<link href="css/theme.css" rel="stylesheet" media="screen">
+		<!--preset-->
+		<link href="css/presets/preset1.css" rel="stylesheet" media="screen" id="layoutstyle">
+		<!-- responsive css -->
+		<link href="css/responsive.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<header class="rox-header clearfix">
+			<div class="box effect2">
+				<div class="container">
+					<div class="navbar_header_area clearfix">
+						<div class="navbar-header">
+							<div class="logo">
+								<h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
+							</div>
+						</div>
+						<div class="header-right pull-right">
+							<div class="login_register">
+								<ul>
+									<li><a href="login.html">Login</a>|</li>
+									<li><a href="registration.html">Register</a></li>
+								</ul>
+							</div>
+							<div class="phone_number">
+								<p>
+									<i class="fa fa-phone"></i> 000-123-456
+								</p>
+							</div>
+							<div id="rox-search" class="search pull-right">
+								<form id="searchForm" action="#blank" method="post">
+									<div class="input-group">									
+										<input type="text" class="form-control search" name="search" id="search" value="Search..." onblur="if(this.value == '') { this.value='Search...'}" onfocus="if (this.value == 'Search...') {this.value=''}">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">
+												<i class="fa fa-search"></i>
+											</button>
+										</span>
+									</div>
+								</form>
+							</div>
+							<div class="cart_amount pull-right">
+									<p><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart (2)</a></p>
+							</div>
+						</div>
+					</div>
+					<div id="mobilemenu" class="mobile-menu"></div>
+					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars">
+						</i>
+					</button>
+					<div class="navbar-collapse nav-main-collapse collapse">
+						<nav class="nav-main mega-menu main_menu">
+							<ul class="nav nav-pills nav-main" id="rox-main-menu">
+							<!-- Drop Down menu Home -->
+								<li class="dropdown rox-submenu-item"><a href="index.html" class="dropdown-toggle"><i class="fa fa-home"></i></a></li>
+								<!-- End Of Drop Down Menu Home -->
+								<li class="dropdown rox-submenu-item"><a href="shop.html" class="dropdown-toggle">SHOP</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="shop-details.html">
+													Shop Details </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="dropdown rox-submenu-item"><a href="blog.html" class="dropdown-toggle">Blog</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="blog-details.html">
+													Blog Details </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="dropdown rox-submenu-item"><a href="#" class="dropdown-toggle">PAGES</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="cart.html">
+													Cart </a>
+											</li>
+											<li>
+												<a href="login.html">
+													Login </a>
+											</li>
+											<li>
+												<a href="registration.html">
+													Registration </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<!-- Start Sortcodes Menu -->
+								<li class="dropdown rox-submenu-item active">
+									<a href="#" class="dropdown-toggle">
+										Sortcodes </a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li class="active">
+												<a href="typography.html">
+													Typography </a>
+											</li>
+											<li>
+												<a href="buttons.html">
+													Buttons </a>
+											</li>
+											<li>
+												<a href="accordion.html">
+													Accordion </a>
+											</li>
+											<li>
+												<a href="column-grid.html">
+													Column Grid </a>
+											</li>
+											<li>
+												<a href="tab.html">
+													Tab </a>
+											</li>
+											<li>
+												<a href="alert.html">
+													Alert </a>
+											</li>
+											<li>
+												<a href="glyphicons.html">
+													Glyphicons </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<!-- End Of Sortcodes Menu -->
+								<li class="rox-submenu-item"><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>	<!-- End Header Section -->
+		<!-- BEGIN THEME PANEL -->
+		<div id="themes_panel">
+			<div id="toggle_button">
+				<a href="#"></a>
+			</div>
+			<div id="themes_menu">
+				<h4 style="text-align:center;">Style Switcher</h4>
+				<div class="segment">
+					<h5>Color</h5>
+					<ul class="theme cookie_layout_style">
+						<li>
+							<a style="background: #CE001A" title="presets/preset1" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #21A117" title="presets/preset2" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #0FF160" title="presets/preset3" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FF0B46" title="presets/preset4" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #5786E7" title="presets/preset5" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #619223" title="presets/preset6" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #D35400" title="presets/preset7" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #ed1f24" title="presets/preset8" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #493375" title="presets/preset9" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #009CF5" title="presets/preset10" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #2DB5AA" title="presets/preset11" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #ED6B61" title="presets/preset12" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #07ad87" title="presets/preset13" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #2DCC70" title="presets/preset14" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FFC406" title="presets/preset15" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FF5400" title="presets/preset16" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #EE82EE" title="presets/preset17" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #9882F6" title="presets/preset18" href="#"></a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="segment">
+					<div id="reset">
+						<a href="#" class="btn reset">Reset</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END THEME PANEL -->
+		<!-- Breadcrumb Section -->
+		<section class="breadcrumb_section_area">
+			<div class="breadcrumb_section">
+				<div class="container main_bg">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="breadcrumb_menu">
+								<ul class="custom_breadcrumb">
+								  <li><a href="index.html">Home</a></li>
+								  <li class="active"><a href="#">Typography</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="page-body">
+			<div class="container main_bg">
+				<div class="body_shadow">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h1>h1. Bootstrap heading</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h2>h2. Bootstrap heading</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h3>h3. Bootstrap heading</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h4>h4. Bootstrap heading</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h5>h5. Bootstrap heading</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h6>h6. Bootstrap heading</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis consectetur purus, a lobortis dui euismod sed. Etiam rutrum eu nunc a placerat. Donec mattis, nunc ut imperdiet suscipit, arcu leo interdum erat, ut hendrerit lorem tellus eget urna. Curabitur in purus eu mi aliquet vestibulum. Aliquam nec arcu auctor mi congue suscipit.
+						</p>
+						<hr>
+						<h3>code example</h3>
+									<pre>
+										<code class="html">
+											&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt; &lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt; &lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt; &lt;h3&gt;h4. Bootstrap heading&lt;/h4&gt; &lt;h4&gt;h5. Bootstrap heading&lt;/h5&gt; &lt;h5&gt;h6. Bootstrap heading&lt;/h6&gt; </code>
+									</pre>
+						<!-- Addresses -->
+						<h2 id="type-addresses">Addresses</h2>
+						<p>
+							Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.
+						</p>
+						<div class="bs-example">
+							<address>
+								<strong>Twitter, Inc.</strong><br>
+								795 Folsom Ave, Suite 600<br>
+								San Francisco, CA 94107<br>
+								<abbr title="Phone">P:</abbr> (123) 456-7890 </address>
+							<address>
+								<strong>Full Name</strong><br>
+								<a href="mailto:#">first.last@example.com</a>
+							</address>
+						</div>
+						<div class="highlight">
+										<pre>
+											<code class="html"><span class="nt">&lt;address&gt;</span>
+												<span class="nt">&lt;strong&gt;</span>Twitter, Inc.<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+												795 Folsom Ave, Suite 600<span class="nt">&lt;br&gt;</span>
+												San Francisco, CA 94107<span class="nt">&lt;br&gt;</span>
+												<span class="nt">&lt;abbr</span><span class="na">title=</span><span class="s">&quot;Phone&quot;</span><span class="nt">&gt;</span>P:<span class="nt">&lt;/abbr&gt;</span> (123) 456-7890 <span class="nt">&lt;/address&gt;</span>
+												<span class="nt">&lt;address&gt;</span>
+												<span class="nt">&lt;strong&gt;</span>Full Name<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+												<span class="nt">&lt;a</span><span class="na">href=</span><span class="s">&quot;mailto:#&quot;</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
+												<span class="nt">&lt;/address&gt;</span>
+											</code>
+										</pre>
+						</div>
+						<!-- Blockquotes -->
+						<h2 id="type-blockquotes">Blockquotes</h2>
+						<p>
+							For quoting blocks of content from another source within your document.
+						</p>
+						<h3>Default blockquote</h3>
+						<p>
+							Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.
+						</p>
+						<div class="bs-example">
+							<blockquote>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								</p>
+							</blockquote>
+						</div>
+						<div class="highlight">
+										<pre>
+											<code class="html"><span class="nt">&lt;blockquote&gt;</span>
+												<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+												<span class="nt">&lt;/blockquote&gt;</span>
+											</code>
+										</pre>
+						</div>
+						<h3>Blockquote options</h3>
+						<p>
+							Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.
+						</p>
+						<h4>Naming a source</h4>
+						<p>
+							Add <code>&lt;small&gt;</code> tag or <code>.small</code> class for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
+						</p>
+						<div class="bs-example">
+							<blockquote>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								</p>
+								<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+							</blockquote>
+						</div>
+						<div class="highlight">
+										<pre>
+											<code class="html"><span class="nt">&lt;blockquote&gt;</span>
+												<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+												<span class="nt">&lt;small&gt;</span>Someone famous in <span class="nt">&lt;cite</span><span class="na">title=</span><span class="s">&quot;Source Title&quot;</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/small&gt;</span>
+												<span class="nt">&lt;/blockquote&gt;</span>
+											</code>
+										</pre>
+						</div>
+						<h4>Alternate displays</h4>
+						<p>
+							Use <code>.pull-right</code> for a floated, right-aligned blockquote.
+						</p>
+						<div class="bs-example" style="overflow: hidden;">
+							<blockquote class="pull-right">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								</p>
+								<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+							</blockquote>
+						</div>
+						<div class="highlight">
+										<pre>
+											<code class="html"><span class="nt">&lt;blockquote</span><span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
+												... <span class="nt">&lt;/blockquote&gt;</span>
+											</code>
+										</pre>
+						</div>
+						<!-- Labels
+						================================================== -->
+						<div class="bs-docs-section">
+							<div class="page-header">
+								<h1 id="labels">Labels</h1>
+							</div>
+							<p class="lead">
+							</p>
+							<h3>Example</h3>
+							<div class="bs-example">
+								<h1>Example heading <span class="label label-default">New</span></h1>
+								<h2>Example heading <span class="label label-default">New</span></h2>
+								<h3>Example heading <span class="label label-default">New</span></h3>
+								<h4>Example heading <span class="label label-default">New</span></h4>
+								<h5>Example heading <span class="label label-default">New</span></h5>
+								<h6>Example heading <span class="label label-default">New</span></h6>
+							</div>
+							<div class="highlight">
+											<pre>
+												<code class="html"><span class="nt">&lt;h3&gt;</span>Example heading <span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-default&quot;</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h3&gt;</span>
+												</code>
+											</pre>
+							</div>
+							<h3>Available variations</h3>
+							<p>
+								Add any of the below mentioned modifier classes to change the appearance of a label.
+							</p>
+							<div class="bs-example">
+								<span class="label label-default">Default</span>
+								<span class="label label-primary">Primary</span>
+								<span class="label label-success">Success</span>
+								<span class="label label-info">Info</span>
+								<span class="label label-warning">Warning</span>
+								<span class="label label-danger">Danger</span>
+							</div>
+							<div class="highlight">
+											<pre>
+												<code class="html"><span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-default&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/span&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-primary&quot;</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/span&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-success&quot;</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/span&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-info&quot;</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/span&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-warning&quot;</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/span&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;label label-danger&quot;</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/span&gt;</span>
+												</code>
+											</pre>
+							</div>
+						</div>
+						<!-- Badges
+						================================================== -->
+						<div class="bs-docs-section">
+							<div class="page-header">
+								<h1 id="badges">Badges</h1>
+							</div>
+							<p class="lead">
+								Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.
+							</p>
+							<div class="bs-example">
+								<a href="#">Inbox <span class="badge">42</span></a>
+							</div>
+							<div class="highlight">
+											<pre>
+												<code class="html"><span class="nt">&lt;a</span><span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Inbox <span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+												</code>
+											</pre>
+							</div>
+							<h4>Self collapsing</h4>
+							<p>
+								When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.
+							</p>
+							<div class="bs-callout bs-callout-danger">
+								<h4>Cross-browser compatibility</h4>
+								<p>
+									Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.
+								</p>
+							</div>
+							<h4>Adapts to active nav states</h4>
+							<p>
+								Built-in styles are included for placing badges in active states in pill and list navigations.
+							</p>
+							<div class="bs-example">
+								<ul class="nav nav-pills">
+									<li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">Messages <span class="badge">3</span></a></li>
+								</ul>
+								<br>
+								<ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+									<li class="active">
+										<a href="#">
+											<span class="badge pull-right">42</span>
+											Home </a>
+									</li>
+									<li><a href="#">Profile</a></li>
+									<li>
+										<a href="#">
+											<span class="badge pull-right">3</span>
+											Messages </a>
+									</li>
+								</ul>
+								<br>
+								<button class="btn btn-primary" type="button">
+									Messages <span class="badge">4</span>
+								</button>
+							</div>
+							<div class="highlight">
+											<pre>
+												<code class="html"><span class="nt">&lt;ul</span><span class="na">class=</span><span class="s">&quot;nav nav-pills nav-stacked&quot;</span><span class="nt">&gt;</span>
+													<span class="nt">&lt;li</span><span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>
+													<span class="nt">&lt;a</span><span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+													<span class="nt">&lt;span</span><span class="na">class=</span><span class="s">&quot;badge pull-right&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;</span>
+													Home <span class="nt">&lt;/a&gt;</span>
+													<span class="nt">&lt;/li&gt;</span>
+													... <span class="nt">&lt;/ul&gt;</span>
+												</code>
+											</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Body Sections -->
+		<footer class="footer_area">
+			<div class="container">
+				<div class="row">
+					<div class="footer">
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="about_us">
+								<h2>ABOUT US</h2>
+								<p>Lorem ipsum has erroribus is a design  no color vituperata ex, bonorum depends an scale you used compre.</p>
+								<div class="phone-and-fax">
+									<p>Phone: +02 555 (000) 4567</p>
+									<p>Fax: +0223 666 (333) 1234</p>
+								</div>
+								<div class="social_area">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus google"></i></a></li>
+										<li><a href="#"><i class="fa fa-flickr flickr"></i></a></li>
+										<li><a href="#"><i class="fa fa-pinterest pinterest"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="useful_link">
+								<h2>USEFUL LINK</h2>
+								<ul>
+									<li><a href="#">About Joomla Website</a></li>
+									<li><a href="#">Custome Module Design</a></li>
+									<li><a href="#">Administrator Link Show</a></li>
+									<li><a href="#">Themerox History Info</a></li>
+									<li><a href="#">About Joomla Site</a></li>
+									<li><a href="#">Custome Module Support</a></li>
+									<li><a href="#">Administrator Link</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="twitter_update">
+								<h2>TWEET UPDATE</h2>
+								<div class="single_tweet">
+									<p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
+									<em>about 20 minutes ago</em></p>
+								</div>
+								<div class="single_tweet">
+									<p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
+									<em>about 20 minutes ago</em></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12 col-xs-12">
+							<div class="flickr_photo_area">
+								<h2>FLICKR PHOTO</h2>
+								<div class="fliker-photo">
+									<a href="images/01.jpg" class="prettyPhoto[gal2]">
+										<img src="images/01.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/02.jpg" class="prettyPhoto[gal2]">
+										<img src="images/02.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/03.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/04.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/05.jpg" class="prettyPhoto[gal2]">
+										<img src="images/05.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/06.jpg" class="prettyPhoto[gal2]">
+										<img src="images/06.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/02.jpg" class="prettyPhoto[gal2]">
+										<img src="images/02.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/04.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/01.jpg" class="prettyPhoto[gal2]">
+										<img src="images/01.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="copyright_text pull-left">
+								<p>Copyright &copy; <a href="#">ThemeRox</a>. All Rights Reserved.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="payment_getway pull-right">
+								<ul>
+									<li><a href="#"><img src="images/paypal.png" alt="Paypal" /></a></li>
+									<li><a href="#"><img src="images/mastercard.png" alt="Master Card" /></a></li>
+									<li><a href="#"><img src="images/cirrus.png" alt="Cirrus" /></a></li>
+									<li><a href="#"><img src="images/visa.png" alt="Visa Card" /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> <!-- end footer section -->
+		<!-- footer bottom area -->
+		
+		
+		<!-- Core required JS files -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap JS file -->
+		<script src="js/bootstrap.js"></script>
+		<!-- modernizr JS file -->
+		<script src="js/modernizr.custom.97074.js"></script>
+		<!--Jquery Mobile Menu Will load when media screen less than 640-->
+		<script type="text/javascript" src="vendors/jquery.mobilemenu/jquery.mobilemenu.js"></script>
+		<!--Jquery Mobile Menu-->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<!-- revolution slider JS -->
+		<script src="vendors/rs/js/jquery.plugins.min.js" type="text/javascript"></script>
+		<script src="vendors/rs/js/jquery.revolution.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/pageview/revusliderpages.js"></script>
+		<!--Theme Panel Scrip-->
+		<script type="text/javascript" src="js/themes_panel.js"></script>
+		<!-- pretty photo JS -->
+		<script src="vendors/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript"></script>
+		<!-- accordion JS -->
+		<script src="vendors/accordion/liteaccordion.jquery.js"></script>
+		<!-- Plugin JS -->
+		<script src="js/plugins.js" type="text/javascript"></script>
+		<!-- common theme JS -->
+		<script src="js/theme.js"></script>
+		<script type="text/javascript">
+		  $(document).ready(function(){
+			$("a[class^='prettyPhoto']").prettyPhoto();
+		  });
+		</script>
+
+		<!--End of Page wise js load for individual page only-->
+		<!--Google Analytic Code remember to re-configure according to your need-->
+		<!-- Google Analytics: Change UA-XXXXX-X to be your google analytic ID. For more information go to http://www.google.com/analytics/ . After all this remove comment to enable script tag.
+		<script>
+		(function(b,o,i,l,e,r){
+		b.GoogleAnalyticsObject=l;
+		b[l]||(b[l]=
+		function(){
+		(b[l].q=b[l].q||[]).push(arguments)}
+		);
+		b[l].l=+new Date;
+		e=o.createElement(i);
+		r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}
+		(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');
+		ga('send','pageview');
+		</script>
+		-->
+		<!--End of Google Analytic Code remember to re-configure according to your need-->
+	</body>
+</html>

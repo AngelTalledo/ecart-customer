@@ -1,0 +1,91 @@
+/* This CSS for small Mobile*/
+@media only screen and (max-width: 767px) {
+/* body{background:#69C238} */
+header .main_menu{border:none;}
+header .main_menu:after{background:none;}
+.header-right {margin-top: -20px;}
+.cart_amount {position: absolute; right: 0; top: 0;}
+.cart_amount {bottom: 0;position: relative;right: -10px;}
+.phone_number {display:none;}
+header div.search{display:none;}
+.navbar-header {display: inline; text-align: center;}
+.header-right {display: inline-block; width: 100%;}
+.mobile-menu {margin-top: -30px;position: relative;z-index: 999999;}
+.logo h1 span{display:none;}
+.copyright_text {width: 100%; text-align: center;}
+.payment_getway {width: 100%;text-align: center; margin-top: 15px;}
+.slider-heading h1{font-size: 18px;margin-top: -15px;}
+.sub_heading{margin-top: -2px;padding:8px;}
+.slider_content{font-size:12px;margin-top:-7px;display:none;}
+a.learnmore{font-size:10px;}
+.tp-bullets.simplebullets.round .bullet{height:12px;width:12px;}
+.selected, .tp-bullets.simplebullets.round .bullet:hover{height:12px;width:12px;}
+.slider-heading h1{padding:5px;}
+.fliker-photo a img {height: 48px; width: 60px;}
+.show-sort {margin-bottom: 50px; padding: 0;}
+.show_item {margin-left: -15px;}
+.item_short {margin-right: -15px;}
+.custom_carousel_indicators{display:none;}
+.shop_details_carousel_control{display:none;}
+.bill_address a, .ship_address a{padding:10px 12px;}
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+/* body{background:#548DC5} */
+header .main_menu{border:none;}
+header .main_menu:after{background:none;}
+.cart_amount {position: absolute;right: 105px;top: -4px;}
+.phone_number {position: absolute; right: 0px; top: 26px;display:block;}
+header div.search{display:block;}
+.login_register { position: absolute; right: 10px; top: 5px;}
+.navbar-header {display: inherit; text-align: none;}
+.header-right {display: inherit; width: 100%;}
+.logo h1 span{display:inline-block;}
+.copyright_text {width: 100%; text-align: center;}
+.payment_getway {width: 100%;text-align: center; margin-top: 15px;}
+.slider-heading h1{font-size: 18px;margin-top: -15px;}
+.sub_heading{margin-top: -8px;padding:10px;display:block}
+.slider_content{font-size:12px;margin-top:-2px;}
+a.learnmore{font-size:10px;}
+.tp-bullets.simplebullets.round .bullet{height:15px;width:15px;}
+.selected, .tp-bullets.simplebullets.round .bullet:hover{height:15px;width:15px;}
+.slider-heading h1{padding:10px;}
+.custom_carousel_indicators{display:block;}
+.shop_details_carousel_control{display:block;}
+.bill_address a, .ship_address a{padding:10px 20px;}
+}
+
+/* This CSS for Tablet */
+@media (min-width: 768px) {
+/* body{background:#FBF2A7} /* light yellow */  */
+header .main_menu{border:none;}
+header .main_menu:after{background:none;}
+.login_register{right:10px;}
+.cart_amount {bottom: -18px;position: absolute;right: 15px;}
+.logo h1 span{display:inline-block;}
+.slider-heading h1{font-size: 20px;margin-top: -5px;}
+.sub_heading{margin-top: -5px;padding:10px;display:block}
+.slider_content{font-size:14px;}
+a.learnmore{font-size:14px;}
+.slider-heading h1{padding:10px;}
+}
+
+/* This CSS for Medium Devices */
+@media (min-width: 992px) {
+/* body{background:#82EDFF}  */
+header .main_menu{border-color: #656565 #313131 #313131 #555555;border-style: solid;border-width: 1px;}
+header .main_menu:after{background: url(../images/menu_shadow.png) no-repeat center bottom;}
+.cart_amount {bottom: -80px;position: absolute;right: 0;}
+.logo h1 span{display:inline-block;}
+.slider-heading h1{font-size:24px}
+.slider_content{font-size:14px;}
+a.learnmore{font-size:14px;}
+.slider-heading h1{padding:10px;}
+.sub_heading{padding:10px;display:block}
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }

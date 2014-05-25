@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<!--[if gt IE 9]>
+<!-->
+<html>
+<!--
+<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Column Grid - eCart Responsive HTML5 Template </title>
+		<meta name="keywords" content="HTML5 Template"/>
+		<meta name="description" content="eCart Responsive html5 Template">
+		<meta name="author" content="http://themerox.com/">
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="vendors/selectivizr/selectivizr.js">
+		</script>
+		<noscript>
+			<link rel="stylesheet" href="css/iefall-back.css.css" />
+		</noscript>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js">
+		</script>
+		<script src="js/respond.js">
+		</script>
+		<![endif]-->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<!-- Fontawsome -->
+		<link href="css/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+		<!-- PT sans Google web font -->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<!-- Menu CSS -->
+		<link href="css/menu/menu.css" rel="stylesheet" media="screen">
+		<link href="css/menu/menu-config.css" rel="stylesheet" media="screen">
+		<link href="css/menu/menu-responsive.css" rel="stylesheet" media="screen">
+		<!--Theme Panel CSS-->
+		<link href="css/themes_panel.css" rel="stylesheet" media="screen">
+		<!-- revolution CSS --> 
+		<link rel="stylesheet" href="vendors/rs/css/settings.css" type="text/css" />
+		<!-- revolution captions CSS -->
+		<!--prettyPhoto-->
+		<link href="vendors/prettyPhoto/prettyPhoto.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="vendors/rs/css/captions.css" type="text/css" />		
+		<!--End of Page View Css Load for Individual page-->
+		<!--accordion-->
+		<link rel="stylesheet" type="text/css" href="vendors/accordion/liteaccordion.css">
+		<link rel="stylesheet" type="text/css" href="vendors/accordion/accordion.css">
+		<!--Theme css-->
+		<link href="css/theme.css" rel="stylesheet" media="screen">
+		<!--preset-->
+		<link href="css/presets/preset1.css" rel="stylesheet" media="screen" id="layoutstyle">
+		<!-- responsive css -->
+		<link href="css/responsive.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<header class="rox-header clearfix">
+			<div class="box effect2">
+				<div class="container">
+					<div class="navbar_header_area clearfix">
+						<div class="navbar-header">
+							<div class="logo">
+								<h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
+							</div>
+						</div>
+						<div class="header-right pull-right">
+							<div class="login_register">
+								<ul>
+									<li><a href="login.html">Login</a>|</li>
+									<li><a href="registration.html">Register</a></li>
+								</ul>
+							</div>
+							<div class="phone_number">
+								<p>
+									<i class="fa fa-phone"></i> 000-123-456
+								</p>
+							</div>
+							<div id="rox-search" class="search pull-right">
+								<form id="searchForm" action="#blank" method="post">
+									<div class="input-group">									
+										<input type="text" class="form-control search" name="search" id="search" value="Search..." onblur="if(this.value == '') { this.value='Search...'}" onfocus="if (this.value == 'Search...') {this.value=''}">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">
+												<i class="fa fa-search"></i>
+											</button>
+										</span>
+									</div>
+								</form>
+							</div>
+							<div class="cart_amount pull-right">
+									<p><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart (2)</a></p>
+							</div>
+						</div>
+					</div>
+					<div id="mobilemenu" class="mobile-menu"></div>
+					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars">
+						</i>
+					</button>
+					<div class="navbar-collapse nav-main-collapse collapse">
+						<nav class="nav-main mega-menu main_menu">
+							<ul class="nav nav-pills nav-main" id="rox-main-menu">
+							<!-- Drop Down menu Home -->
+								<li class="dropdown rox-submenu-item"><a href="index.html" class="dropdown-toggle"><i class="fa fa-home"></i></a></li>
+								<!-- End Of Drop Down Menu Home -->
+								<li class="dropdown rox-submenu-item"><a href="shop.html" class="dropdown-toggle">SHOP</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="shop-details.html">
+													Shop Details </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="dropdown rox-submenu-item"><a href="blog.html" class="dropdown-toggle">Blog</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="blog-details.html">
+													Blog Details </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<li class="dropdown rox-submenu-item"><a href="#" class="dropdown-toggle">PAGES</a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="cart.html">
+													Cart </a>
+											</li>
+											<li>
+												<a href="login.html">
+													Login </a>
+											</li>
+											<li>
+												<a href="registration.html">
+													Registration </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<!-- Start Sortcodes Menu -->
+								<li class="dropdown rox-submenu-item active">
+									<a href="#" class="dropdown-toggle">
+										Sortcodes </a>
+									<ul class="dropdown-menu">
+										<div class="rox-menu-wrapper">
+											<li>
+												<a href="typography.html">
+													Typography </a>
+											</li>
+											<li>
+												<a href="buttons.html">
+													Buttons </a>
+											</li>
+											<li>
+												<a href="accordion.html">
+													Accordion </a>
+											</li>
+											<li class="active">
+												<a href="column-grid.html">
+													Column Grid </a>
+											</li>
+											<li>
+												<a href="tab.html">
+													Tab </a>
+											</li>
+											<li>
+												<a href="alert.html">
+													Alert </a>
+											</li>
+											<li>
+												<a href="glyphicons.html">
+													Glyphicons </a>
+											</li>
+										</div>
+									</ul>
+								</li>
+								<!-- End Of Sortcodes Menu -->
+								<li class="rox-submenu-item"><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>	<!-- End Header Section -->
+		<!-- BEGIN THEME PANEL -->
+		<div id="themes_panel">
+			<div id="toggle_button">
+				<a href="#"></a>
+			</div>
+			<div id="themes_menu">
+				<h4 style="text-align:center;">Style Switcher</h4>
+				<div class="segment">
+					<h5>Color</h5>
+					<ul class="theme cookie_layout_style">
+						<li>
+							<a style="background: #CE001A" title="presets/preset1" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #21A117" title="presets/preset2" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #0FF160" title="presets/preset3" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FF0B46" title="presets/preset4" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #5786E7" title="presets/preset5" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #619223" title="presets/preset6" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #D35400" title="presets/preset7" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #ed1f24" title="presets/preset8" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #493375" title="presets/preset9" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #009CF5" title="presets/preset10" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #2DB5AA" title="presets/preset11" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #ED6B61" title="presets/preset12" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #07ad87" title="presets/preset13" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #2DCC70" title="presets/preset14" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FFC406" title="presets/preset15" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #FF5400" title="presets/preset16" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #EE82EE" title="presets/preset17" href="#"></a>
+						</li>
+						<li>
+							<a style="background: #9882F6" title="presets/preset18" href="#"></a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="segment">
+					<div id="reset">
+						<a href="#" class="btn reset">Reset</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END THEME PANEL -->
+		<!-- Breadcrumb Section -->
+		<section class="breadcrumb_section_area">
+			<div class="breadcrumb_section">
+				<div class="container main_bg">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="breadcrumb_menu">
+								<ul class="custom_breadcrumb">
+								  <li><a href="index.html">Home</a></li>
+								  <li class="active"><a href="#">Column Grid</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="page-body">
+			<div class="container main_bg">
+				<div class="body_shadow">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<p class="lead">
+							Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.
+						</p>
+						<h3 id="grid-intro">Introduction</h3>
+						<p>
+							Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:
+						</p>
+						<ul>
+							<li>Rows must be placed within a <code>.container</code> for proper alignment and padding.</li>
+							<li>Use rows to create horizontal groups of columns.</li>
+							<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+							<li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. LESS mixins can also be used for more semantic layouts.</li>
+							<li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+							<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
+						</ul>
+						<p>
+							Look to the examples for applying these principles to your code.
+						</p>
+						<div class="bs-callout bs-callout-info">
+							<h4>Grids and full-width layouts</h4>
+							<p>
+								Folks looking to create fully fluid layouts (meaning your site stretches the entire width of the viewport) must wrap their grid content in a containing element with <code>padding: 0 15px;</code> to offset the <code>margin: 0 -15px;</code> used on <code>.row</code>s.
+							</p>
+						</div>
+						<h3 id="grid-media-queries">Media queries</h3>
+						<p>
+							We use the following media queries in our LESS files to create the key breakpoints in our grid system.
+						</p>
+						<div class="highlight">
+							<pre>
+								<code class="css"><span class="c">/* Extra small devices (phones, less than 768px) */</span>
+									<span class="c">/* No media query since this is the default in Bootstrap */</span>
+									<span class="c">/* Small devices (tablets, 768px and up) */</span>
+									<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-sm-min</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+									<span class="c">/* Medium devices (desktops, 992px and up) */</span>
+									<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-md-min</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+									<span class="c">/* Large devices (large desktops, 1200px and up) */</span>
+									<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-lg-min</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+								</code>
+							</pre>
+						</div>
+						<p>
+							We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.
+						</p>
+						<div class="highlight">
+						<pre>
+							<code class="css"><span class="k">@media</span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="k">@screen-xs-max</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+								<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-sm-min</span><span class="o">)</span><span class="nt">and</span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="k">@screen-sm-max</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+								<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-md-min</span><span class="o">)</span><span class="nt">and</span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="k">@screen-md-max</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+								<span class="k">@media</span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="k">@screen-lg-min</span><span class="o">)</span><span class="p">{</span><span class="o">...</span><span class="p">}</span>
+							</code>
+						</pre>
+						</div>
+						<h3 id="grid-options">Grid options</h3>
+						<p>
+							See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+						</p>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<thead>
+								<tr>
+									<th>
+									</th>
+									<th>
+										Extra small devices <small>Phones (&lt;768px)</small>
+									</th>
+									<th>
+										Small devices <small>Tablets (=768px)</small>
+									</th>
+									<th>
+										Medium devices <small>Desktops (=992px)</small>
+									</th>
+									<th>
+										Large devices <small>Desktops (=1200px)</small>
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<th>
+										Grid behavior
+									</th>
+									<td>
+										Horizontal at all times
+									</td>
+									<td colspan="3">
+										Collapsed to start, horizontal above breakpoints
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Max container width
+									</th>
+									<td>
+										None (auto)
+									</td>
+									<td>
+										750px
+									</td>
+									<td>
+										970px
+									</td>
+									<td>
+										1170px
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Class prefix
+									</th>
+									<td>
+										<code>.col-xs-</code>
+									</td>
+									<td>
+										<code>.col-sm-</code>
+									</td>
+									<td>
+										<code>.col-md-</code>
+									</td>
+									<td>
+										<code>.col-lg-</code>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										# of columns
+									</th>
+									<td colspan="4">
+										12
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Max column width
+									</th>
+									<td class="text-muted">
+										Auto
+									</td>
+									<td>
+										60px
+									</td>
+									<td>
+										78px
+									</td>
+									<td>
+										95px
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Gutter width
+									</th>
+									<td colspan="4">
+										30px (15px on each side of a column)
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Nestable
+									</th>
+									<td colspan="4">
+										Yes
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Offsets
+									</th>
+									<td colspan="4">
+										Yes
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Column ordering
+									</th>
+									<td colspan="4">
+										Yes
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>
+							Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.
+						</p>
+						<h3 id="grid-example-basic">Example: Stacked-to-horizontal</h3>
+						<p>
+							Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.
+						</p>
+						<div class="bs-docs-grid">
+							<div class="row show-grid">
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+								<div class="col-md-1">
+									.col-md-1
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-md-8">
+									.col-md-8
+								</div>
+								<div class="col-md-4">
+									.col-md-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-md-4">
+									.col-md-4
+								</div>
+								<div class="col-md-4">
+									.col-md-4
+								</div>
+								<div class="col-md-4">
+									.col-md-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-md-6">
+									.col-md-6
+								</div>
+								<div class="col-md-6">
+									.col-md-6
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-8"</span><span class="nt">&gt;</span>.col-md-8<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-example-mixed">Example: Mobile and desktop</h3>
+						<p>
+							Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code><code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.
+						</p>
+						<div class="bs-docs-grid">
+							<div class="row show-grid">
+								<div class="col-xs-12 col-md-8">
+									.col-xs-12 .col-md-8
+								</div>
+								<div class="col-xs-6 col-md-4">
+									.col-xs-6 .col-md-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-xs-6 col-md-4">
+									.col-xs-6 .col-md-4
+								</div>
+								<div class="col-xs-6 col-md-4">
+									.col-xs-6 .col-md-4
+								</div>
+								<div class="col-xs-6 col-md-4">
+									.col-xs-6 .col-md-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-xs-6">
+									.col-xs-6
+								</div>
+								<div class="col-xs-6">
+									.col-xs-6
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="c">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-12 col-md-8"</span><span class="nt">&gt;</span>.col-xs-12 .col-md-8<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-md-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="c">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-md-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-md-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-md-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="c">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6"</span><span class="nt">&gt;</span>.col-xs-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6"</span><span class="nt">&gt;</span>.col-xs-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-example-mixed-complete">Example: Mobile, tablet, desktops</h3>
+						<p>
+							Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.
+						</p>
+						<div class="bs-docs-grid">
+							<div class="row show-grid">
+								<div class="col-xs-12 col-sm-6 col-md-8">
+									.col-xs-12 .col-sm-6 .col-md-8
+								</div>
+								<div class="col-xs-6 col-md-4">
+									.col-xs-6 .col-md-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-xs-6 col-sm-4">
+									.col-xs-6 .col-sm-4
+								</div>
+								<div class="col-xs-6 col-sm-4">
+									.col-xs-6 .col-sm-4
+								</div>
+								<!-- Optional: clear the XS cols if their content doesn't match in height -->
+								<div class="clearfix visible-xs">
+								</div>
+								<div class="col-xs-6 col-sm-4">
+									.col-xs-6 .col-sm-4
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-12 col-sm-6 col-md-8"</span><span class="nt">&gt;</span>.col-xs-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-md-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+									<span class="c">&lt;!-- Optional: clear the XS cols if their content doesn't match in height --&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"clearfix visible-xs"</span><span class="nt">&gt;&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-responsive-resets">Responsive column resets</h3>
+						<p>
+							With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="#responsive-utilities">responsive utility classes</a>.
+						</p>
+						<div class="bs-docs-grid">
+							<div class="row show-grid">
+								<div class="col-xs-6 col-sm-3">
+									.col-xs-6 .col-sm-3 <br>
+									Resize your viewport or check it out on your phone for an example.
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									.col-xs-6 .col-sm-3
+								</div>
+								<!-- Add the extra clearfix for only the required viewport -->
+								<div class="clearfix visible-xs">
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									.col-xs-6 .col-sm-3
+								</div>
+								<div class="col-xs-6 col-sm-3">
+									.col-xs-6 .col-sm-3
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+									<span class="c">&lt;!-- Add the extra clearfix for only the required viewport --&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"clearfix visible-xs"</span><span class="nt">&gt;&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-xs-6 col-sm-3"</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<p>
+							In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. Those resets are available for medium and large grid tiers only, since they start only at the (second) small grid tier. See this in action in <a href="http://www.themerox.com/themeforest/html/examples/grid/">the grid example</a>.
+						</p>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-sm-5 col-md-6"</span><span class="nt">&gt;</span>.col-sm-5 .col-md-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0"</span><span class="nt">&gt;</span>.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-sm-6 col-md-5 col-lg-6"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .col-lg-6<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0"</span><span class="nt">&gt;</span>.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-offsetting">Offsetting columns</h3>
+						<p>
+							Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.
+						</p>
+						<div class="bs-docs-grid">
+							<div class="row show-grid">
+								<div class="col-md-4">
+									.col-md-4
+								</div>
+								<div class="col-md-4 col-md-offset-4">
+									.col-md-4 .col-md-offset-4
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-md-3 col-md-offset-3">
+									.col-md-3 .col-md-offset-3
+								</div>
+								<div class="col-md-3 col-md-offset-3">
+									.col-md-3 .col-md-offset-3
+								</div>
+							</div>
+							<div class="row show-grid">
+								<div class="col-md-6 col-md-offset-3">
+									.col-md-6 .col-md-offset-3
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-4 col-md-offset-4"</span><span class="nt">&gt;</span>.col-md-4 .col-md-offset-4<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-3 col-md-offset-3"</span><span class="nt">&gt;</span>.col-md-3 .col-md-offset-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-3 col-md-offset-3"</span><span class="nt">&gt;</span>.col-md-3 .col-md-offset-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-6 col-md-offset-3"</span><span class="nt">&gt;</span>.col-md-6 .col-md-offset-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-nesting">Nesting columns</h3>
+						<p>
+							To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-md-*</code> columns within an existing <code>.col-md-*</code> column. Nested rows should include a set of columns that add up to 12.
+						</p>
+						<div class="row show-grid">
+							<div class="col-md-9">
+								Level 1: .col-md-9
+								<div class="row show-grid">
+									<div class="col-md-6">
+										Level 2: .col-md-6
+									</div>
+									<div class="col-md-6">
+										Level 2: .col-md-6
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-9"</span><span class="nt">&gt;</span>
+									Level 1: .col-md-9 <span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>
+									Level 2: .col-md-6 <span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>
+									Level 2: .col-md-6 <span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						<h3 id="grid-column-ordering">Column ordering</h3>
+						<p>
+							Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.
+						</p>
+						<div class="row show-grid">
+							<div class="col-md-9 col-md-push-3">
+								.col-md-9 .col-md-push-3
+							</div>
+							<div class="col-md-3 col-md-pull-9">
+								.col-md-3 .col-md-pull-9
+							</div>
+						</div>
+						<div class="highlight">
+							<pre>
+								<code class="html"><span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-9 col-md-push-3"</span><span class="nt">&gt;</span>.col-md-9 .col-md-push-3<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;div</span><span class="na">class=</span><span class="s">"col-md-3 col-md-pull-9"</span><span class="nt">&gt;</span>.col-md-3 .col-md-pull-9<span class="nt">&lt;/div&gt;</span>
+									<span class="nt">&lt;/div&gt;</span>
+								</code>
+							</pre>
+						</div>
+						</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Body Sections -->
+		<footer class="footer_area">
+			<div class="container">
+				<div class="row">
+					<div class="footer">
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="about_us">
+								<h2>ABOUT US</h2>
+								<p>Lorem ipsum has erroribus is a design  no color vituperata ex, bonorum depends an scale you used compre.</p>
+								<div class="phone-and-fax">
+									<p>Phone: +02 555 (000) 4567</p>
+									<p>Fax: +0223 666 (333) 1234</p>
+								</div>
+								<div class="social_area">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus google"></i></a></li>
+										<li><a href="#"><i class="fa fa-flickr flickr"></i></a></li>
+										<li><a href="#"><i class="fa fa-pinterest pinterest"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="useful_link">
+								<h2>USEFUL LINK</h2>
+								<ul>
+									<li><a href="#">About Joomla Website</a></li>
+									<li><a href="#">Custome Module Design</a></li>
+									<li><a href="#">Administrator Link Show</a></li>
+									<li><a href="#">Themerox History Info</a></li>
+									<li><a href="#">About Joomla Site</a></li>
+									<li><a href="#">Custome Module Support</a></li>
+									<li><a href="#">Administrator Link</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12">
+							<div class="twitter_update">
+								<h2>TWEET UPDATE</h2>
+								<div class="single_tweet">
+									<p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
+									<em>about 20 minutes ago</em></p>
+								</div>
+								<div class="single_tweet">
+									<p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
+									<em>about 20 minutes ago</em></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-12 col-xs-12">
+							<div class="flickr_photo_area">
+								<h2>FLICKR PHOTO</h2>
+								<div class="fliker-photo">
+									<a href="images/01.jpg" class="prettyPhoto[gal2]">
+										<img src="images/01.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/02.jpg" class="prettyPhoto[gal2]">
+										<img src="images/02.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/03.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/04.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/05.jpg" class="prettyPhoto[gal2]">
+										<img src="images/05.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/06.jpg" class="prettyPhoto[gal2]">
+										<img src="images/06.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/02.jpg" class="prettyPhoto[gal2]">
+										<img src="images/02.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/04.jpg" class="prettyPhoto[gal2]">
+										<img src="images/04.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+									<a href="images/01.jpg" class="prettyPhoto[gal2]">
+										<img src="images/01.jpg" class="img-responsive" alt="Responsive image">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom_area">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="copyright_text pull-left">
+								<p>Copyright &copy; <a href="#">ThemeRox</a>. All Rights Reserved.</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="payment_getway pull-right">
+								<ul>
+									<li><a href="#"><img src="images/paypal.png" alt="Paypal" /></a></li>
+									<li><a href="#"><img src="images/mastercard.png" alt="Master Card" /></a></li>
+									<li><a href="#"><img src="images/cirrus.png" alt="Cirrus" /></a></li>
+									<li><a href="#"><img src="images/visa.png" alt="Visa Card" /></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> <!-- end footer section -->
+		<!-- footer bottom area -->
+		
+		
+		<!-- Core required JS files -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap JS file -->
+		<script src="js/bootstrap.js"></script>
+		<!-- modernizr JS file -->
+		<script src="js/modernizr.custom.97074.js"></script>
+		<!--Jquery Mobile Menu Will load when media screen less than 640-->
+		<script type="text/javascript" src="vendors/jquery.mobilemenu/jquery.mobilemenu.js"></script>
+		<!--Jquery Mobile Menu-->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<!-- revolution slider JS -->
+		<script src="vendors/rs/js/jquery.plugins.min.js" type="text/javascript"></script>
+		<script src="vendors/rs/js/jquery.revolution.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/pageview/revusliderpages.js"></script>
+		<!--Theme Panel Scrip-->
+		<script type="text/javascript" src="js/themes_panel.js"></script>
+		<!-- pretty photo JS -->
+		<script src="vendors/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript"></script>
+		<!-- accordion JS -->
+		<script src="vendors/accordion/liteaccordion.jquery.js"></script>
+		<!-- Plugin JS -->
+		<script src="js/plugins.js" type="text/javascript"></script>
+		<!-- common theme JS -->
+		<script src="js/theme.js"></script>
+		<script type="text/javascript">
+		  $(document).ready(function(){
+			$("a[class^='prettyPhoto']").prettyPhoto();
+		  });
+		</script>
+
+		<!--End of Page wise js load for individual page only-->
+		<!--Google Analytic Code remember to re-configure according to your need-->
+		<!-- Google Analytics: Change UA-XXXXX-X to be your google analytic ID. For more information go to http://www.google.com/analytics/ . After all this remove comment to enable script tag.
+		<script>
+		(function(b,o,i,l,e,r){
+		b.GoogleAnalyticsObject=l;
+		b[l]||(b[l]=
+		function(){
+		(b[l].q=b[l].q||[]).push(arguments)}
+		);
+		b[l].l=+new Date;
+		e=o.createElement(i);
+		r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}
+		(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');
+		ga('send','pageview');
+		</script>
+		-->
+		<!--End of Google Analytic Code remember to re-configure according to your need-->
+	</body>
+</html>
