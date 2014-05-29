@@ -68,12 +68,22 @@
 							</div>
 						</div>
 						<div class="header-right pull-right">
-							<div class="login_register">
-								<ul>
-									<li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
-									<li><a href="registration.php">Registrar</a></li>
-								</ul>
-							</div>
+                            <?php
+                            session_start();
+                            if(!isset($_SESSION['US'])){?>
+                                <div class="login_register">
+                                    <ul>
+                                        <li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
+                                        <li><a href="registration.php">Registrar</a></li>
+                                    </ul>
+                                </div>
+                            <?php }else{ ?>
+                                <div class="login_register">
+
+                                    <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
+                                    <span class="text-left"><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
+                                </div>
+                            <?php }?>
 							<div class="phone_number">
 								<p>
 									<i class="fa fa-phone"></i> 000-123-456
