@@ -71,6 +71,7 @@
 							</div>
 						</div>
 						<div class="header-right pull-right">
+<<<<<<< HEAD
                             <?php
                             session_start();
                             if(!isset($_SESSION['US'])){?>
@@ -86,6 +87,13 @@
                                     <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
                                 </div>
                             <?php }?>
+=======
+							<div class="login_register">
+								<ul>
+									<li><a href="index.php">Inicio</a>|</li>
+								</ul>
+							</div>
+>>>>>>> 2186e47f9e8ab0818c6752a39a7cc3788f2fd9ab
 							<div class="phone_number">
 								<p>
 									<i class="fa fa-phone"></i> 000-123-456
@@ -373,7 +381,17 @@
 									</h2>
 								</div>
 								<div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
+
 									<div class="member_login_form">
+										
+										<?php
+											if(isset($_GET['n']) and $_GET['n']==1){
+												?>
+												<span class="text-warning">Contraseña o Usuario Incorrecto</span>
+												<?php
+
+											}
+										?>
                                       <form action="verificar_login.php" class="clearfix" method="post">
 											<div class="username">
 												<label>User Name</label>

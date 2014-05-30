@@ -73,8 +73,8 @@
 						<div class="header-right pull-right">
 							<div class="login_register">
 								<ul>
-									<li><a href="login.html">Login</a>|</li>
-									<li><a href="registration.html">Register</a></li>
+									<li><a href="login.php">Login</a>|</li>
+									<li><a href="registration.php">Register</a></li>
 								</ul>
 							</div>
 							<div class="phone_number">
@@ -363,22 +363,29 @@
 								<p class="required_field">* Required field</p>
 								<div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
 									<div class="member_registration_form">
-                                                                            <form action="agregar_usuario.php" method="post">
+                                    <form action="agregar_usuario.php" method="post" enctype="multipart/form-data">
+
+
+											<div class="name">
+												<label>Foto*</label>
+											<input type="file" name="foto">
+											</div>
+
 											<div class="name">
 												<label>Apellido Paterno*</label>
 												<input type="text" name="firsName" required placeholder="Nombre">
 											</div>
 											<div class="username">
 												<label>Apellido Materno*</label>
-												<input type="text" name="lastName" required  placeholder="">
+												<input type="text" name="lastName" required  placeholder="Apellido Materno">
 											</div>
 											<div class="password">
 												<label>Nombres*</label>
-												<input type="text" name="staffNames" required>
+												<input type="text" name="staffNames" required placeholder="Nombres">
 											</div>
 											<div class="password">
 												<label>DNI*</label>
-												<input type="number" name="dni" required >
+												<input type="number" name="dni" required placeholder="DNI">
 											</div>
 											<div class="sexo">
 												<label style="font-weight:normal;font-size:12px">Sexo*</label><br>
@@ -389,30 +396,32 @@
                                             </div>
 											<div class="email_address">
 												<label>Direccion*</label>
-												<input type="text" name="address" required>
+												<input type="text" name="address" placeholder="Direccion">
 											</div>
                                             
                                             <div class="email_address">
 												<label>Email*</label>
-												<input type="text" name="email" required>
+												<input type="text" name="email" required placeholder="Email">
 											</div>
                                             <div class="email_address">
 												<label>Telefono*</label>
-												<input type="text"  name="phone" required>
+												<input type="text"  name="phone" placeholder="Telefono">
 											</div>
                                             <div class="email_address">
 												<label>Celular*</label>
-												<input type="text" name="celular" required>
+												<input type="text" name="celular" required placeholder="Celular">
 											</div>
+	
                                             <div class="email_address">
 												<label>Nombre de Usuario*</label>
-												<input type="text" name="userName" required>
+												<input type="text" name="userName" required placeholder="Nombre de Usuario">
 											</div>
                                             <div class="email_address">
 												<label>Password*</label>
-												<input type="password" name="userPassword" required>
+												<input type="password" name="userPassword" required placeholder="Password">
 											</div>
-                                            
+                                           </div>	
+
 											<div class="submit_btn">
 												<div class="submit_reg_info pull-right">
 													<input type="submit" value="Register">
