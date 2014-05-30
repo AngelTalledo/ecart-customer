@@ -515,6 +515,9 @@ a.text-success:hover {
 a.text-info:hover {
   color: #245269;
 }
+.text-session{
+    color: #868686 ;
+}
 .text-warning {
   color: #8a6d3b;
 }

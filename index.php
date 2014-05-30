@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie ie8">
@@ -64,7 +65,7 @@
 					<div class="navbar_header_area clearfix">
 						<div class="navbar-header">
 							<div class="logo">
-								<h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
+								<h1><a class="text-warning" href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
 							</div>
 						</div>
 						<div class="header-right pull-right">
@@ -81,7 +82,7 @@
                                 <div class="login_register">
 
                                     <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
-                                    <span class="text-left"><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
+                                    <span class="text-session"><?php echo $_SESSION['US'];?></span><samp>|</samp><a >Cerrar Session</a>
                                 </div>
                             <?php }?>
 							<div class="phone_number">
