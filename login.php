@@ -71,30 +71,22 @@
 							</div>
 						</div>
 						<div class="header-right pull-right">
-<<<<<<< HEAD
-                            <?php
-                            session_start();
-                            if(!isset($_SESSION['US'])){?>
-                                <div class="login_register">
-                                    <ul>
-                                        <li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
-                                        <li><a href="registration.php">Registrar</a></li>
-                                    </ul>
-                                </div>
-                            <?php }else{ ?>
-                                <div class="login_register">
-                                    <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
-                                    <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
-                                </div>
-                            <?php }?>
-=======
-							<div class="login_register">
-								<ul>
-									<li><a href="index.php">Inicio</a>|</li>
-								</ul>
-							</div>
->>>>>>> 2186e47f9e8ab0818c6752a39a7cc3788f2fd9ab
-							<div class="phone_number">
+			                            <?php
+			                            session_start();
+			                            if(!isset($_SESSION['US'])){?>
+			                                <div class="login_register">
+			                                    <ul>
+			                                        <li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
+			                                        <li><a href="registration.php">Registrar</a></li>
+			                                    </ul>
+			                                </div>
+			                            <?php }else{ ?>
+			                                <div class="login_register">
+			                                    <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
+			                                    <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
+			                                </div>
+			                            <?php }?>
+						<div class="phone_number">
 								<p>
 									<i class="fa fa-phone"></i> 000-123-456
 								</p>
