@@ -82,7 +82,7 @@
                             <?php }else{ ?>
                                 <div class="login_register">
                                     <img src="Imagenes/user/<?php echo $_SESSION['US'] ?>.jpg" width="24px"height="24px" alt=""/>
-                                    <span class="text-left"><?php echo $_SESSION['US'];?></span>|<a href="cerrar_sesion.php">Cerrar Session</a>
+                                    <span class="text-session"><?php echo $_SESSION['US'];?>|</span><a href="cerrar_sesion.php">Cerrar Session</a>
                                 </div>
                             <?php }?>
 							<div class="phone_number">
