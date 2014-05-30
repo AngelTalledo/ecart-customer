@@ -73,8 +73,7 @@
 						<div class="header-right pull-right">
 							<div class="login_register">
 								<ul>
-									<li><a href="login.html">Login</a>|</li>
-									<li><a href="registration.html">Register</a></li>
+									<li><a href="index.php">Inicio</a>|</li>
 								</ul>
 							</div>
 							<div class="phone_number">
@@ -364,7 +363,17 @@
 									</h2>
 								</div>
 								<div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
+
 									<div class="member_login_form">
+										
+										<?php
+											if(isset($_GET['n']) and $_GET['n']==1){
+												?>
+												<span class="text-warning">Contraseña o Usuario Incorrecto</span>
+												<?php
+
+											}
+										?>
                                       <form action="verificar_login.php" class="clearfix" method="post">
 											<div class="username">
 												<label>User Name</label>

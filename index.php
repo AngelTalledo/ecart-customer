@@ -67,6 +67,7 @@
 								<h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
 							</div>
 						</div>
+
 						<div class="header-right pull-right">
                             <?php
                             session_start();
@@ -80,8 +81,8 @@
                             <?php }else{ ?>
                                 <div class="login_register">
 
-                                    <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
-                                    <span class="text-left"><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
+                                    <img src="Imagenes/user/<?php echo $_SESSION['US'] ?>.jpg" width="24px"height="24px" alt=""/>
+                                    <span class="text-left"><?php echo $_SESSION['US'];?></span>|<a href="cerrar_sesion.php">Cerrar Session</a>
                                 </div>
                             <?php }?>
 							<div class="phone_number">

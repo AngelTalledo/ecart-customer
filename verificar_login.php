@@ -8,12 +8,14 @@ $result = $objLoginClass->registrarUser();
 $numRow = $result->num_rows;
 $row = $result->fetch_array();
 if($numRow > 0){
-    $_SESSION['usuario'] = $row['pkCustomers'];
-    $_SESSION['US']= $row['customersfNames']." ".$row['firstName']." ".$row['lastName'];
+    $_SESSION['usuario'] = $row['username'];
+    $_SESSION['US']= $row['customersfNames'];
+  
     header("Location:index.php");
 }else{
-    $_SESSION['error']= 'Contraseña o Usuario Incorrecto';
+    header("Location:login.php?n=1");
     echo('error');
+
     return;
 }
 /*
