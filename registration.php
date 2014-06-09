@@ -357,23 +357,22 @@
 							<div class="col-md-9 col-sm-12 col-xs-12">
 								<div class="featured_title shop_title">
 									<h2 class="featured_header">			
-										<span>User Registration</span>
+										<span>Registro de Usuario</span>
 									</h2>
 								</div>
-								<p class="required_field">* Required field</p>
+								<p class="required_field">* Datos Requeridos</p>
 								<div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
 									<div class="member_registration_form">
                                     <form action="agregar_usuario.php" method="post" enctype="multipart/form-data">
 
-
-											<div class="name">
+											<div class="password">
 												<label>Foto*</label>
-											<input type="file" name="foto">
+											    <input type="file" name="photo">
 											</div>
 
-											<div class="name">
+											<div class="username">
 												<label>Apellido Paterno*</label>
-												<input type="text" name="firsName" required placeholder="Nombre">
+												<input type="text" name="firsName" required placeholder="Apellido Paterno">
 											</div>
 											<div class="username">
 												<label>Apellido Materno*</label>
@@ -424,10 +423,10 @@
 
 											<div class="submit_btn">
 												<div class="submit_reg_info pull-right">
-													<input type="submit" value="Register">
+													<input type="submit" value="Registrar">
 												</div>
 												<div class="cancel pull-right">
-													<input type="reset" value="Clear">
+													<input type="reset" value="Limpiar">
 												</div>
 											</div>
 										</form>

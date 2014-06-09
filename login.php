@@ -1,3 +1,9 @@
+<?php
+session_start();
+$User;
+if(!isset($_SESSION['US'])){ $User = true;}
+    else{ $User=false;}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie ie8">
@@ -72,8 +78,7 @@
 						</div>
 						<div class="header-right pull-right">
 			                            <?php
-			                            session_start();
-			                            if(!isset($_SESSION['US'])){?>
+			                              if($User = true){?>
 			                                <div class="login_register">
 			                                    <ul>
 			                                        <li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
@@ -82,7 +87,7 @@
 			                                </div>
 			                            <?php }else{ ?>
 			                                <div class="login_register">
-			                                    <img src="Imagenes/user/default-user.png" width="24px"height="24px" alt=""/>
+			                                    <img src="Imagenes/user/default-user.png" class="img-thumbnail" width="24px"height="24px" alt=""/>
 			                                    <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
 			                                </div>
 			                            <?php }?>
@@ -369,7 +374,7 @@
 							<div class="col-md-9 col-sm-12 col-xs-12">
 								<div class="featured_title shop_title">
 									<h2 class="featured_header">			
-										<span>User Login</span>
+										<span>Login</span>
 									</h2>
 								</div>
 								<div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
@@ -386,11 +391,11 @@
 										?>
                                       <form action="verificar_login.php" class="clearfix" method="post">
 											<div class="username">
-												<label>User Name</label>
+												<label>Usuario*</label>
                                                 <input type="text" name="name">
 											</div>
 											<div class="password">
-												<label>Password</label>
+												<label>Password*</label>
                                                <input type="password" name="password">
 											</div>
 											<div class="submit_btn">

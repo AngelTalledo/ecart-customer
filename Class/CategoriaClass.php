@@ -2,12 +2,11 @@
 
 class Class_CategoriaClass{
     private $_nombreTipoProducto;
-
+    private $_idMarca;
     public function __call($name, $arguments) {
         $methodType = substr($name, 0,3);
         $attribName  = substr($name, 3,  strlen($name));
-        $attribName = strtolower($attribName[0]).substr($attribName, 1,
-                strlen($name));
+        $attribName = strtolower($attribName[0]).substr($attribName, 1,strlen($name));
         $attribName = '_'.$attribName;
         switch ($methodType){
             case 'set':
@@ -22,9 +21,14 @@ class Class_CategoriaClass{
         }
     }
 
-    public function getCategoria(){
+    public function getIdCategoria(){
         $objDataBase = new Cpu_DataBase();
-        $sql= "";
+        $sql= "CALL ecart_getListAllMarca(1);";
+        return $objDataBase->executeQueryStoreProcedure($sql);
+    }
+    public function getFkCategoria($idMarca){
+        $objDataBase = new Cpu_DataBase();
+        $sql = "CALL ecart_getModoloMarca(".$idMarca.",1);";
         return $objDataBase->executeQueryStoreProcedure($sql);
     }
 }

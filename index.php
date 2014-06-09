@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie ie8">
@@ -71,7 +73,7 @@
 
 						<div class="header-right pull-right">
                             <?php
-                            session_start();
+
                             if(!isset($_SESSION['US'])){?>
                                 <div class="login_register">
                                     <ul>
@@ -81,7 +83,7 @@
                                 </div>
                             <?php }else{ ?>
                                 <div class="login_register">
-                                    <img src="Imagenes/user/<?php echo $_SESSION['US'] ?>.jpg" width="24px"height="24px" alt=""/>
+                                    <img src="Imagenes/user/<?php echo $_SESSION['photo'];?>.jpg" width="24px"height="24px" alt=""/>
                                     <span class="text-session"><?php echo $_SESSION['US'];?>|</span><a href="cerrar_sesion.php">Cerrar Session</a>
                                 </div>
                             <?php }?>
@@ -507,246 +509,76 @@
 							<span>New Product</span>
 						</h2>
 					</div>
-					<div class="featured_content_area">
-						<div id="featured_carousel" class="carousel slide" data-ride="carousel">
+
+					<div class="product_content_area">
+						<div id="product_carousel1" class="carousel slide" data-ride="carousel">
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner">
-								<div class="item active">
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="new_product_banner">
-												<p>N <br />E <br />W</p>
-											</div>
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-													<img src="images/featured-img/1.png" alt="" />
-												</a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-													<img src="images/featured-img/1.png" alt="" />
-												</a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="hot_product_banner">
-												<p>H <br />O <br />T</p>
-											</div>
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="new_product_banner">
-												<p>N <br />E <br />W</p>
-											</div>
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="hot_product_banner">
-												<p>H <br />O <br />T</p>
-											</div>
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-6 col-xs-12">
-										<div class="single_featured_post">
-											<div class="featured_image">
-												<a href="images/featured-img/1.png" class="prettyPhoto">
-												<img src="images/featured-img/1.png" alt="" /></a>
-											</div>
-											<div class="featured_content">
-												<div class="content_title">
-													<a href="#"><h2>OPTIMUS PRIME</h2></a>
-												</div>
-												<div class="price">
-													<p>$200.00</p>
-												</div>
-												<div class="about_product">
-													<div class="add-to-cart">
-														<a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
-														<p>Add to Cart</p></a>
-													</div>
-													<div class="view-details">
-														<a href="shop-details.html"><i class="fa fa-eye"></i>
-														<p>View Details</p></a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+                                    <?php
+                                    $x=1;
+                                    $y=0;
+                                     $objDataBase = new Cpu_DataBase();
+                                     $objProducto = new Class_ProductoClass();
+                                    $row = $objProducto->getSliderProducto();
+                                    while($rowProducto= $row->fetch_array()){
+                                        if ($x==1){
+                                     ?>
+                                <div class="item <?php if($y==0){ echo 'active';$y=1;} ?>">
+                                        <?php
+                                        }
+                                    ?>
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
+                                            <div class="single_featured_post">
+                                                <div class="new_product_banner">
+                                                    <p>N <br />E <br />W</p>
+                                                </div>
+                                                <div class="featured_image">
+                                                    <a href="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" class="prettyPhoto">
+                                                        <img src="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" alt="" width="200px" height="200px" />
+                                                    </a>
+                                                </div>
+                                                <div class="featured_content">
+                                                    <div class="content_title">
+                                                        <a href="#"><h2>OPTIMUS PRIME</h2></a>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p>$<?php echo $rowProducto['precioVenta']; ?></p>
+                                                    </div>
+                                                    <div class="about_product">
+                                                        <div class="add-to-cart">
+                                                            <a href="shop-details.html"><i class="fa fa-shopping-cart"></i>
+                                                                <p>Add to Cart</p></a>
+                                                        </div>
+                                                        <div class="view-details">
+                                                            <a href="shop-details.html"><i class="fa fa-eye"></i>
+                                                                <p>View Details</p></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+								    <?php
+                                    $x++;
+                                    if ($x>=5){
+                                    $x=1;
+                                    ?>
+                                </div>
+                                    <?php
+                                    }
+                                    }?>
+
 							</div>
 
 								<!-- Controls -->
-								<a class="left carousel-control" href="#featured_carousel" data-slide="prev">
+								<a class="left carousel-control" href="#product_carousel1" data-slide="prev">
 									<span> <i class="fa fa-angle-left"></i></span>
 								</a>
-								<a class="right carousel-control" href="#featured_carousel" data-slide="next">
+								<a class="right carousel-control" href="#product_carousel1" data-slide="next">
 									<span> <i class="fa fa-angle-right"></i></span>
 								</a>
-						</div>
+
+
 					</div>
 				</div>
 			</div>

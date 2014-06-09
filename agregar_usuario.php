@@ -23,22 +23,18 @@ $objUserClass->setTelefono($_POST['phone']);
 $objUserClass->setCelular($_POST['celular']);
 $objUserClass->setUsuario($_POST['userName']);
 $objUserClass->setPassword($_POST['userPassword']);
+$objUserClass->setUserPhoto($_POST['userName']);
 
 
-if($objUserClass->addUser()>0){
-if($_FILES["foto"]["type"]=="image/jpeg")
-            {
+    if($objUserClass->addUser()>0){
+    if($_FILES["photo"]["type"]=="image/jpeg")
+                {
                     //subimor la foto
-                   $foto=$_POST["staffNames"].".jpg";
-                    copy($_FILES["foto"]["tmp_name"],"Imagenes/User/$foto");
-         
-            }
-    header ("Location:index.php?m=1");
-}else{ 
-
-
-
-
-    echo 'Ya existen estos datos...';
-}
+                    $foto=$_POST["userName"].".jpg";
+                      copy($_FILES["photo"]["tmp_name"],"Imagenes/User/$foto");
+                }
+        header ("Location:index.php?m=1");
+    }else{
+        echo 'Ya existen estos datos...';
+    }
 ?>
