@@ -62,7 +62,16 @@ class Class_ProductoClass {
         $sql= "Call ecart_OverallPageProducto();";
         return $objDataBase->executeQueryStoreProcedure($sql);
     }
-    public  function getListProductoModelo(){
+    public  function getListProductoModelo($Modelo){
+        $objDataBase = new Cpu_DataBase();
+        $sql= "Call ecart_getListProductoModelo($Modelo);";
+        return $objDataBase->executeQueryStoreProcedure($sql);
+    }
+
+    public  function getListProductoId($Id){
+        $objDataBase = new Cpu_DataBase();
+        $sql= "Call ecart_getListProductoId($Id);";
+        return $objDataBase->executeQueryStoreProcedure($sql);
 
     }
 

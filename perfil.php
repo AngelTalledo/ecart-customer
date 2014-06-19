@@ -1,42 +1,8 @@
 <?php
-include_once("Class/ProductoClass.php");
 session_start();
 $User;
 if(!isset($_SESSION['US'])){ $User = true;}
 else{ $User=false;}
-
-$objProducto = new Class_ProductoClass();
-
-  if(!isset($_SESSION['US'])){ $User = true;}
-  else{ $User=false;}
-  if(!isset($_SESSION['paginado']))
-  { $largo=10;}
-  else{$largo=$_SESSION['paginado']; }
-  if($_POST){
-   $largo=$_POST['largo'];
-    $_SESSION['paginado']=$largo;
-      header('LOCATION: ?page=0');
-  }
-    if(isset($_GET['page'])){
-    $page=$_GET['page'];
-    $page=$page*$largo;
-    }else
-      { $page=0; }
-    if(!isset($_GET['id'])){
-        $fitems=$objProducto->getProducto($page,$largo);
-    }
-    else{
-        if($_GET['id']== 'all'){
-            $fitems=$objProducto->getProducto($page,$largo);
-        }else{
-        $fitems=$objProducto->getListProductoMarca($_GET['id'],$page,$largo);
-        }
-    }
-
-$totalreg= $objProducto->getCountProducto();
-$totalpaginas=$totalreg->fetch_array();
-$cantidad=($totalpaginas[0])/$largo;
-$cantidad=  ceil($cantidad);
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]>
@@ -52,7 +18,7 @@ $cantidad=  ceil($cantidad);
 <![endif]-->
 <head>
     <meta charset="utf-8">
-    <title> Shop - eCart Responsive HTML5 Template </title>
+    <title> Login - eCart Responsive HTML5 Template </title>
     <meta name="keywords" content="HTML5 Template"/>
     <meta name="description" content="eCart Responsive html5 Template">
     <meta name="author" content="http://themerox.com/">
@@ -62,7 +28,7 @@ $cantidad=  ceil($cantidad);
     <script type="text/javascript" src="vendors/selectivizr/selectivizr.js">
     </script>
     <noscript>
-        <link rel="stylesheet" href="/css/iefall-back.css.css" />
+        <link rel="stylesheet" href="css/iefall-back.css.css" />
     </noscript>
     <![endif]-->
     <!--[if lt IE 9]>
@@ -99,12 +65,6 @@ $cantidad=  ceil($cantidad);
     <link href="css/presets/preset1.css" rel="stylesheet" media="screen" id="layoutstyle">
     <!-- responsive css -->
     <link href="css/responsive.css" rel="stylesheet" media="screen">
-    <script>
-        function enviar(){
-            var form =document.getElementById('frmpag');
-            form.submit();
-        }
-    </script>
 </head>
 <body>
 <header class="rox-header clearfix">
@@ -118,7 +78,7 @@ $cantidad=  ceil($cantidad);
                 </div>
                 <div class="header-right pull-right">
                     <?php
-                    if($User == true){?>
+                    if($User = true){?>
                         <div class="login_register">
                             <ul>
                                 <li><a href="login.php" id="roxpopup" class="roxup-btn">Login</a>|</li>
@@ -127,7 +87,7 @@ $cantidad=  ceil($cantidad);
                         </div>
                     <?php }else{ ?>
                         <div class="login_register">
-                            <img src="Imagenes/user/<?php echo $_SESSION['photo']?>.jpg" width="24px"height="24px" alt=""/>
+                            <img src="Imagenes/user/default-user.png" class="img-thumbnail" width="24px"height="24px" alt=""/>
                             <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
                         </div>
                     <?php }?>
@@ -164,6 +124,7 @@ $cantidad=  ceil($cantidad);
                         <!-- Drop Down menu Home -->
                         <li class="rox-submenu-item active"><a href="index.html"><i class="fa fa-home"></i></a></li>
                         <!-- End Of Drop Down Menu Home -->
+
                         <?php
                         require_once('Components/Config.conf');
                         $objMenuTemplate  = new Class_MenuTemplateClass();
@@ -188,7 +149,11 @@ $cantidad=  ceil($cantidad);
                             </li>
                         <?php } ?>
 
+
+
+
                         <!-- End Of Sortcodes Menu -->
+
                     </ul>
                 </nav>
             </div>
@@ -278,8 +243,9 @@ $cantidad=  ceil($cantidad);
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="breadcrumb_menu">
                         <ul class="custom_breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><a href="#">Shop</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li class="active"><a href="#">Pefil</a></li>
                         </ul>
                     </div>
                 </div>
@@ -288,178 +254,101 @@ $cantidad=  ceil($cantidad);
     </div>
 </section>
 <div class="shop_section_area">
-<div class="shop_area">
-<div class="container main_bg">
-<div class="body_shadow">
-<div class="row">
-<div class="col-md-3">
-    <div class="left_sidebar">
-        <div class="featured_title shop_title">
-            <h2 class="featured_header">
-                <span>Categories</span>
-            </h2>
-        </div>
+    <div class="shop_area">
+        <div class="container main_bg">
+            <div class="body_shadow">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="left_sidebar">
+                            <div class="featured_title shop_title">
+                                <h2 class="featured_header">
+                                    <span>Perfil</span>
+                                </h2>
+                            </div>
+                           <div class="category_item">
+                               <div class="featured_title shop_title">
+                                   <h2 class="featured_header">
+                                       <span>Configuracion de Cuenta</span>
+                                   </h2>
+                               </div>
+                               <div class="featured_title shop_title">
+                                   <h2 class="featured_header">
+                                       <span>Mis Compras</span>
+                                   </h2>
+                               </div>
 
-        <div class="category_item">
-            <div class="panel-group panel_group_customize" id="accordion">
-                <div class="panel panel-default panel_customize">
-                    <div class="panel-heading panel_heading_customize">
-                        <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href=#">
-                                <span class="pull-left plus"></span>
-                            </a>  <a href="?id=all"> Mostrar Todo</a>
+                           </div>
+                            <div class="featured_title shop_title">
+                                <h2 class="featured_header">
+                                    <span>Categories</span>
+                                </h2>
+                            </div>
+                            <div class="category_item">
+                                <div class="panel-group panel_group_customize" id="accordion">
+                                    <div class="panel panel-default panel_customize">
+                                        <div class="panel-heading panel_heading_customize">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href=#">
+                                                    <span class="pull-left plus"></span>
+                                                </a>  <a href="?id=all"> Mostrar Todo</a>
 
-                        </h4>
-                    </div>
-                 </div>
-                <?php
-                $objCategoria = new Class_CategoriaClass();
-                $resultMarca = $objCategoria->getIdCategoria();
-                while($rowMarca = $resultMarca->fetch_array()){
-                ?>
-                <div class="panel panel-default panel_customize">
-                    <div class="panel-heading panel_heading_customize">
-                        <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#<?php echo $rowMarca['nombreMarca']; ?>">
-                                <span class="pull-left plus"></span></a>
-                              <a href="?id=<?php echo $rowMarca['idMarca'];?>"> <?php echo $rowMarca['nombreMarca']; ?></a>
-
-                        </h4>
-                    </div>
-                    <div id="<?php echo $rowMarca['nombreMarca']; ?>" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <div class="single_category_item">
-                                <ul>
+                                            </h4>
+                                        </div>
+                                    </div>
                                     <?php
                                     $objCategoria = new Class_CategoriaClass();
-                                    $resultModelo = $objCategoria->getFkCategoria($rowMarca['idMarca']);
-                                    while($rowModelo = $resultModelo->fetch_array()){
-                                    ?>
-                                    <li><a href="shop-details.php?modelo=<?php echo($rowModelo['idModelo'])?>"><?php echo $rowModelo['nombreModelo'];?></a></li>
+                                    $resultMarca = $objCategoria->getIdCategoria();
+                                    while($rowMarca = $resultMarca->fetch_array()){
+                                        ?>
+                                        <div class="panel panel-default panel_customize">
+                                            <div class="panel-heading panel_heading_customize">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#<?php echo $rowMarca['nombreMarca']; ?>">
+                                                        <span class="pull-left plus"></span></a>
+                                                    <a href="?id=<?php echo $rowMarca['idMarca'];?>"> <?php echo $rowMarca['nombreMarca']; ?></a>
+
+                                                </h4>
+                                            </div>
+                                            <div id="<?php echo $rowMarca['nombreMarca']; ?>" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="single_category_item">
+                                                        <ul>
+                                                            <?php
+                                                            $objCategoria = new Class_CategoriaClass();
+                                                            $resultModelo = $objCategoria->getFkCategoria($rowMarca['idMarca']);
+                                                            while($rowModelo = $resultModelo->fetch_array()){
+                                                                ?>
+                                                                <li><a href=""><?php echo $rowModelo['nombreModelo'];?></a></li>
+                                                            <?php } ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     <?php } ?>
-                                </ul>
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
-                </div>
-                <?php } ?>
+                    <!-- User Login Area -->
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="featured_title shop_title">
+                            <h2 class="featured_header">
+                                <span>Perfil</span>
+                            </h2>
+                        </div>
 
+                        <div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
+                           <div class="blog_area" >
 
-
-            </div>
-
-
-        </div>
-
-        <div class="featured_title shop_title">
-            <h2 class="featured_header">
-                <span>Pricing Filter</span>
-            </h2>
-        </div>
-        <div class="pricing_filter_area">
-            <div id="slider"></div>
-        </div>
-    </div>
-</div>
-<!-- Our Shop Area -->
-<div class="col-md-9">
-<div class="our_shop_area">
-<div class="our_shop_item_header clearfix">
-    <div class="col-md-8 col-sm-7 col-xs-12">
-        <div class="featured_title shop_title">
-            <h2 class="featured_header">
-                <span>Our Shop</span>
-            </h2>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-5 col-xs-12">
-        <div class="show-sort">
-            <div class="show_item pull-left">
-                <h4>Show</h4>
-
-                <form action="#" method='post' id='frmpag'>
-                    <select name="largo" id="show-item" onchange='enviar()'>
-                        <?php
-                        for ($x=5;$x<=20;$x+=5){
-                            if($x==$largo){
-                                echo '<option value="'.$x.'" selected=selected>'.$x.'</option>';
-                            }  else {
-                                echo '<option value="'.$x.'">'.$x.'</option>';
-                            }
-                        }
-                        ?>
-                    </select>
-                </form>
-            </div>
-            <div class="item_short pull-right">
-                <h4>Sort By</h4>
-                <select name="" id="sort-item" class="pull-right">
-                    <option value="">Position</option>
-                    <option value="">Price</option>
-                    <option value="">Name</option>
-                </select>
-            </div>
-        </div>
-    </div>
-</div>
-  <div class="our_shop_product clearfix">
-      <?php
-        while($rowProducto=$fitems->fetch_array()){ ?>
-
-    <div class="col-md-4 col-sm-6 col-xs-12">
-    <div class="single_featured_post">
-        <div class="new_product_banner">
-            <p>N <br />E <br />W</p>
-        </div>
-        <div class="featured_image">
-            <a href="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" class="prettyPhoto">
-                <img src="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" alt="" width="200px" height="200px" />
-            </a>
-        </div>
-        <div class="featured_content">
-            <div class="content_title">
-                <a href="#"><h2><?php echo $rowProducto['nombreMarca']." ".$rowProducto['nombreModelo'];?></h2></a>
-            </div>
-            <div class="price">
-                <p>$<?php echo $rowProducto['precioVenta']; ?></p>
-            </div>
-            <div class="about_product">
-                <div class="add-to-cart">
-                    <a href="shop-details.php?modelo=<?php echo($rowProducto['idModelo'])?>"><i class="fa fa-shopping-cart"></i>
-                        <p>Add to Cart</p></a>
-                </div>
-                <div class="view-details">
-                    <a href="shop-details.php?modelo=<?php echo($rowProducto['idModelo'])?>"><i class="fa fa-eye"></i>
-                        <p>View Details</p></a>
+                           </div>
+                         </div> <!-- End User Login Area -->
                 </div>
             </div>
         </div>
     </div>
-</div>
-      <?php }?>
-
- </div>
-    <div class="pagination_area pull-right">
-        <ul>
-            <li><a href="?page=0"><i class="fa fa-angle-left"></i></a></li>
-            <?php
-            for ($x=0;$x<$cantidad;$x++){
-                $active='';
-                if($page==$x){
-                $active='class="active"';
-                }
-                echo '<li '.$active.'><a href="?page='.$x.'">'.($x+1).'</a></li>';
-            }
-            ?>
-            <li><a href="?page=<?php echo ($cantidad-1); ?>"><i class="fa fa-angle-right"></i></a></li>
-        </ul>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <footer class="footer_area">
     <div class="container">
@@ -467,10 +356,10 @@ $cantidad=  ceil($cantidad);
             <div class="footer">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="about_us">
-                        <h2>ACERCA DE</h2>
-                        <p>Quieres más información sobre los telefonos libres o tu pedido? Contactanos:</p>
+                        <h2>ABOUT US</h2>
+                        <p>Lorem ipsum has erroribus is a design  no color vituperata ex, bonorum depends an scale you used compre.</p>
                         <div class="phone-and-fax">
-                            <p>Telefono: +02 555 (000) 4567</p>
+                            <p>Phone: +02 555 (000) 4567</p>
                             <p>Fax: +0223 666 (333) 1234</p>
                         </div>
                         <div class="social_area">
@@ -486,14 +375,15 @@ $cantidad=  ceil($cantidad);
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="useful_link">
-                        <h2>CONTACTANOS</h2>
+                        <h2>USEFUL LINK</h2>
                         <ul>
-                            <li><a href="#">Nuestras Tiendas</a></li>
-                            <li><a href="#">Lugares de pago</a></li>
-                            <li><a href="#">Expertos Smart</a></li>
-                            <li><a href="#">Atención Telefónica</a></li>
-                            <li><a href="#">Acerca de Nosotros</a></li>
-
+                            <li><a href="#">About Joomla Website</a></li>
+                            <li><a href="#">Custome Module Design</a></li>
+                            <li><a href="#">Administrator Link Show</a></li>
+                            <li><a href="#">Themerox History Info</a></li>
+                            <li><a href="#">About Joomla Site</a></li>
+                            <li><a href="#">Custome Module Support</a></li>
+                            <li><a href="#">Administrator Link</a></li>
                         </ul>
                     </div>
                 </div>
@@ -501,18 +391,18 @@ $cantidad=  ceil($cantidad);
                     <div class="twitter_update">
                         <h2>TWEET UPDATE</h2>
                         <div class="single_tweet">
-                            <p><a href="#">@ Angel Talledo:  Terminaremos el Proyecto?</a> <br />
+                            <p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
                                 <em>about 20 minutes ago</em></p>
                         </div>
                         <div class="single_tweet">
-                            <p><a href="#">@ Bryan Checa:  Con fe mi estimado Con fe!</a> <br />
+                            <p><a href="#">@ John Dow:  Lorem ipsum has erroribus  design  no color vituperata</a> <br />
                                 <em>about 20 minutes ago</em></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12">
                     <div class="flickr_photo_area">
-                        <h2>GALERIA DE FOTOS</h2>
+                        <h2>FLICKR PHOTO</h2>
                         <div class="fliker-photo">
                             <a href="images/01.jpg" class="prettyPhoto[gal2]">
                                 <img src="images/01.jpg" class="img-responsive" alt="Responsive image">

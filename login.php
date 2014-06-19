@@ -88,7 +88,7 @@ if(!isset($_SESSION['US'])){ $User = true;}
 			                            <?php }else{ ?>
 			                                <div class="login_register">
 			                                    <img src="Imagenes/user/default-user.png" class="img-thumbnail" width="24px"height="24px" alt=""/>
-			                                    <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a >Cerrar Session</a>
+			                                    <span class=text-warning><?php echo $_SESSION['US'];?></span>|<a href="cerrar_sesion.php" >Cerrar Session</a>
 			                                </div>
 			                            <?php }?>
 						<div class="phone_number">
