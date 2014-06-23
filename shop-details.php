@@ -246,8 +246,8 @@ if(!isset ($_GET['modelo'])){
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="breadcrumb_menu">
 								<ul class="custom_breadcrumb">
-								  <li><a href="index.html">Home</a></li>
-								  <li><a href="shop.html">Shop</a></li>
+								  <li><a href="index.php">Home</a></li>
+								  <li><a href="shop.php">Shop</a></li>
 								  <li class="active"><a href="#">Shop Details</a></li>
 								</ul>
 							</div>
