@@ -1,5 +1,11 @@
 <?php
 session_start();
+$ConCart = 0;
+if(!isset($_SESSION['carrito'])){
+    $ConCart=0;
+}else{
+    $datos=$_SESSION['carrito'];
+    $ConCart =count($datos);}
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]>
@@ -105,7 +111,7 @@ session_start();
 								</form>
 							</div>
 							<div class="cart_amount pull-right">
-								<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
+								<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (<?php echo($ConCart);?>)</a></p>
 							</div>
 						</div>
 					</div>
