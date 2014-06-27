@@ -122,7 +122,7 @@ if(!isset($_SESSION['US'])){ $User = true;}
 						<nav class="nav-main mega-menu main_menu">
 							<ul class="nav nav-pills nav-main" id="rox-main-menu">
 							<!-- Drop Down menu Home -->
-								<li class="rox-submenu-item active"><a href="index.html"><i class="fa fa-home"></i></a></li>
+								<li class="rox-submenu-item active"><a href="index.php"><i class="fa fa-home"></i></a></li>
 								<!-- End Of Drop Down Menu Home -->
                                                                 
 								<?php 
@@ -244,7 +244,6 @@ if(!isset($_SESSION['US'])){ $User = true;}
 							<div class="breadcrumb_menu">
 								<ul class="custom_breadcrumb">
 								  <li><a href="index.php">Home</a></li>
-								  <li><a href="#">Page</a></li>
 								  <li class="active"><a href="#">Login</a></li>
 								</ul>
 							</div>
