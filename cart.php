@@ -183,7 +183,7 @@ if(isset($_SESSION['carrito'])){
                         <nav class="nav-main mega-menu main_menu">
                             <ul class="nav nav-pills nav-main" id="rox-main-menu">
                                 <!-- Drop Down menu Home -->
-                                <li class="rox-submenu-item active"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                                <li class="rox-submenu-item active"><a href="index.php"><i class="fa fa-home"></i></a></li>
                                 <!-- End Of Drop Down Menu Home -->
                                 <?php
                                 require_once('Components/Config.conf');
