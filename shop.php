@@ -1,6 +1,13 @@
 <?php
 include_once("Class/ProductoClass.php");
 session_start();
+$ ConCart  =  0 ;
+si ( ! isset ( $ _SESSION [ 'Carrito' ])) {
+    $ ConCart = 0 ;
+} más {
+    $ Datos = $ _SESSION [ 'Carrito' ];
+    $ ConCart  = count ( $ Datos );}
+
 $User;
 if(!isset($_SESSION['US'])){ $User = true;}
 else{ $User=false;}
@@ -149,7 +156,7 @@ $cantidad=  ceil($cantidad);
                         </form>
                     </div>
                     <div class="cart_amount pull-right">
-                        <p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
+                        <p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (<?php echo($ConCart);?>)</a></p>
                     </div>
                 </div>
             </div>
