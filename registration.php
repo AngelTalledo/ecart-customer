@@ -67,7 +67,7 @@
 					<div class="navbar_header_area clearfix">
 						<div class="navbar-header">
 							<div class="logo">
-								<h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
+								<h1><a href="index.php">E-CART</a> <span>Shopping Is Fun</span></h1>
 							</div>
 						</div>
 						<div class="header-right pull-right">
@@ -95,7 +95,7 @@
 								</form>
 							</div>
 							<div class="cart_amount pull-right">
-									<p><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart (2)</a></p>
+									<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
 							</div>
 						</div>
 					</div>
