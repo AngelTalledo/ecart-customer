@@ -28,11 +28,11 @@ class Cpu_Report {
         $this->setFileType($fileType);
         $this->setAutoDownloaded($autoDownloaded);
         $here = getcwd();
-        $this->setReportURL("${here}/Public/Reports/".$this->getNameReport().".rptdesign");
+        $this->setReportURL("${here}/Reports/".$this->getNameReport().".rptdesign");
         $pth = "http://" . $_SERVER["HTTP_HOST"] . $_SERVER["PHP_SELF"];
         $path_parts = pathinfo($pth);
-        $this->setImageURL($path_parts['dirname'] ."/Public/Images/");
-        $this->setImageDirectory($here . "/Public/Images/");
+        $this->setImageURL($path_parts['dirname'] ."/images/");
+        $this->setImageDirectory($here . "/images/");
     }
     
     /**

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.5.2.v20100211 Build &lt;2.5.2.v20100210-0630></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="IdPedido" id="101">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="8">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost/e-cart</property>
+            <property name="odaUser">root</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.SPSelectDataSet" name="Data Set" id="80">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">IdPedido</property>
+                    <property name="paramName">IdPedido</property>
+                    <property name="dataType">integer</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">0</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">IdProducto</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">nombreTipoProducto</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">nombreMarca</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">idModelo</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">nombreModelo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ImagenProducto</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">idPedido</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">idProducto</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">subtotal</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">idPedido</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">totalPedido</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">IdProducto</property>
+                    <property name="nativeName">IdProducto</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">nombreTipoProducto</property>
+                    <property name="nativeName">nombreTipoProducto</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">nombreMarca</property>
+                    <property name="nativeName">nombreMarca</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">idModelo</property>
+                    <property name="nativeName">idModelo</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">nombreModelo</property>
+                    <property name="nativeName">nombreModelo</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ImagenProducto</property>
+                    <property name="nativeName">ImagenProducto</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">idPedido</property>
+                    <property name="nativeName">idPedido</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">idProducto</property>
+                    <property name="nativeName">idProducto</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">cantidad</property>
+                    <property name="nativeName">cantidad</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">subtotal</property>
+                    <property name="nativeName">subtotal</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">idPedido_11</property>
+                    <property name="nativeName">idPedido</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">totalPedido</property>
+                    <property name="nativeName">totalPedido</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{Call ecart_getListPedidoDetalle (?)}
+]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">small</property>
+            <property name="fontStyle">italic</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="NewStyle" id="26">
+            <property name="fontSize">x-large</property>
+            <property name="borderBottomStyle">dashed</property>
+            <property name="textAlign">center</property>
+        </style>
+        <style name="NewStyle1" id="43">
+            <property name="textAlign">center</property>
+        </style>
+        <style name="NewStyle2" id="56">
+            <property name="backgroundColor">#E6E6E6</property>
+        </style>
+        <style name="NewStyle3" id="57">
+            <property name="backgroundColor">#D6D6D6</property>
+        </style>
+        <style name="NewStyle4" id="58">
+            <property name="backgroundColor">#D6D6D6</property>
+        </style>
+        <style name="NewStyle5" id="59">
+            <property name="backgroundColor">#D6D6D6</property>
+        </style>
+        <style name="NewStyle6" id="98">
+            <property name="textAlign">center</property>
+            <property name="verticalAlign">middle</property>
+        </style>
+        <style name="NewStyle7" id="99">
+            <property name="borderBottomStyle">inset</property>
+        </style>
+        <style name="NewStyle8" id="100">
+            <property name="borderBottomStyle">groove</property>
+        </style>
+        <style name="NewStyle9" id="104">
+            <property name="textAlign">right</property>
+        </style>
+        <style name="NewStyle10" id="105">
+            <property name="textAlign">left</property>
+        </style>
+        <style name="NewStyle11" id="106">
+            <property name="borderBottomStyle">dashed</property>
+        </style>
+        <style name="NewStyle12" id="145">
+            <property name="borderBottomStyle">dashed</property>
+        </style>
+        <style name="NewStyle13" id="146">
+            <property name="borderLeftStyle">none</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="9">
+            <property name="height">1.34375in</property>
+            <column id="10"/>
+            <column id="11"/>
+            <column id="12"/>
+            <row id="13">
+                <cell id="14"/>
+                <cell id="15"/>
+                <cell id="16"/>
+            </row>
+            <row id="17">
+                <cell id="18"/>
+                <cell id="19"/>
+                <cell id="20"/>
+            </row>
+            <row id="21">
+                <property name="height">1.0104166666666667in</property>
+                <cell id="22"/>
+                <cell id="23">
+                    <label id="27"/>
+                    <label id="28"/>
+                    <label id="29"/>
+                    <label id="25">
+                        <property name="style">NewStyle</property>
+                        <text-property name="text">Resumen de Pedido</text-property>
+                    </label>
+                </cell>
+                <cell id="24"/>
+            </row>
+        </grid>
+        <table id="60">
+            <property name="width">6.625in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">nombreMarca</property>
+                    <text-property name="displayName">nombreMarca</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nombreMarca"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nombreModelo</property>
+                    <text-property name="displayName">nombreModelo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["nombreModelo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">subtotal</property>
+                    <text-property name="displayName">subtotal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["subtotal"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">cantidad</property>
+                    <text-property name="displayName">cantidad</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["cantidad"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <column id="79">
+                <property name="width">1.7916666666666667in</property>
+            </column>
+            <column id="74">
+                <property name="width">2.9270833333333335in</property>
+            </column>
+            <column id="75">
+                <property name="width">1.90625in</property>
+                <property name="style">NewStyle6</property>
+            </column>
+            <header>
+                <row id="61">
+                    <cell id="76"/>
+                    <cell id="63">
+                        <label id="45">
+                            <property name="style">NewStyle4</property>
+                            <text-property name="text">Descripcion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="64">
+                        <label id="46">
+                            <property name="style">NewStyle5</property>
+                            <text-property name="text">Importe</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="65">
+                    <property name="height">0.6041666666666666in</property>
+                    <cell id="77"/>
+                    <cell id="67">
+                        <property name="style">NewStyle13</property>
+                        <grid id="88">
+                            <property name="height">0.5520833333333334in</property>
+                            <column id="89">
+                                <property name="style">NewStyle9</property>
+                            </column>
+                            <column id="90"/>
+                            <row id="91">
+                                <property name="height">0.28125in</property>
+                                <cell id="92">
+                                    <property name="style">NewStyle12</property>
+                                    <data id="94">
+                                        <property name="resultSetColumn">nombreMarca</property>
+                                    </data>
+                                </cell>
+                                <cell id="93">
+                                    <property name="style">NewStyle12</property>
+                                    <data id="95">
+                                        <property name="style">NewStyle10</property>
+                                        <property name="resultSetColumn">nombreModelo</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="135">
+                                <property name="height">0.2708333333333333in</property>
+                                <cell id="136">
+                                    <label id="144">
+                                        <text-property name="text">Cantidad:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="137">
+                                    <data id="102">
+                                        <property name="resultSetColumn">cantidad</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                    <cell id="68">
+                        <data id="96">
+                            <property name="resultSetColumn">subtotal</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

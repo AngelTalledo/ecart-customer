@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('Class/PedidoClass.php');
 $User;
 if(!isset($_SESSION['US'])){ $User = true;}
 else{ $User=false;}
@@ -122,7 +123,7 @@ else{ $User=false;}
                 <nav class="nav-main mega-menu main_menu">
                     <ul class="nav nav-pills nav-main" id="rox-main-menu">
                         <!-- Drop Down menu Home -->
-                        <li class="rox-submenu-item active"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                        <li class="rox-submenu-item active"><a href="index.php"><i class="fa fa-home"></i></a></li>
                         <!-- End Of Drop Down Menu Home -->
 
                         <?php
@@ -260,6 +261,7 @@ else{ $User=false;}
                 <div class="row">
                     <div class="col-md-3">
                         <div class="left_sidebar">
+                            <!--
                             <div class="featured_title shop_title">
                                 <h2 class="featured_header">
                                     <span>Perfil</span>
@@ -272,12 +274,15 @@ else{ $User=false;}
                                    </h2>
                                </div>
                                <div class="featured_title shop_title">
-                                   <h2 class="featured_header">
-                                       <span>Mis Compras</span>
-                                   </h2>
+                                   <a href="#review">
+                                       <h2 class="featured_header">
+                                           <span>Mis Compras</span>
+                                       </h2>
+                                   </a>
                                </div>
 
                            </div>
+                            -->
                             <div class="featured_title shop_title">
                                 <h2 class="featured_header">
                                     <span>Categories</span>
@@ -340,9 +345,60 @@ else{ $User=false;}
                             </h2>
                         </div>
 
-                        <div class="col-md-5 col-sm-5 col-xs-12 member_login_area">
+                        <div class="col-md-12 col-sm-5 col-xs-12 member_login_area">
                            <div class="blog_area" >
+                               <div class="product_tab_area">
+                                   <div class="featured_title shop_title clearfix">
+                                       <h2 class="featured_header">
+                                           <span>Datos Generales</span>
+                                       </h2>
+                                   </div>
+                                   <div class="bs-example bs-example-tabs">
+                                       <ul class="nav nav-tabs custom_shop_tab" id="myTab">
+                                           <li class="active"><a data-toggle="tab" href="#description">Datos</a></li>
+                                           <li class=""><a data-toggle="tab" href="#compras">Compras</a></li>
+                                       </ul>
+                                       <div class="tab-content shop_tab_content" id="myTabContent">
+                                           <div id="description" class="tab-pane fade active in">
 
+                                           </div>
+                                       <div id="compras" class="tab-pane fade">
+                                           <div class="cart_area">
+                                                 <div class="featured_title shop_title">
+                                                    <h2 class="featured_header">
+                                                       <span>Informe de Pedidos</span>
+                                                    </h2>
+                                           </div>
+                                                 <div class="table-responsive">
+                                                     <table class="table table-bordered table-striped">
+                                                          <tbody class="cart_product_table">
+                                                                <caption> Informe </caption>
+                                                                <tr class="tr-title">
+                                                                    <td>#</td>
+                                                                    <td>Id Pedido</td>
+                                                                    <td>Fecha De Pedido</td>
+                                                                    <td>Total</td>
+                                                                </tr><?php $objPedido = new Class_PedidoClass();
+                                                                    $pk = $_SESSION['pkCustomers']; $i=0;
+                                                                    $rowPedido = $objPedido->getLisPedido($pk);
+                                                                    while($rowDTP = $rowPedido->fetch_array()){
+                                                                        $i++;
+                                                                ?>
+                                                                <tr class="voleta_area">
+                                                                    <td><?php echo($i);?></td>
+                                                                    <td><a href="ReportOrder.php?idP=<?php echo($rowDTP['idPedido']);?>"><?php echo($rowDTP['idPedido']);?></a></td>
+                                                                    <td><?php echo($rowDTP['fechaPedido']);?></td>
+                                                                    <td><?php echo($rowDTP['totalPedido']);?></td>
+                                                                </tr>
+                                                                  <?php }?>
+                                                                </tbody>
+                                                     </table>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
                            </div>
                          </div> <!-- End User Login Area -->
                 </div>

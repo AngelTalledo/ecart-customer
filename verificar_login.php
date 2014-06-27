@@ -12,6 +12,7 @@
         $_SESSION['usuario'] = $row['username'];
         $_SESSION['US']= $row['customersfNames'].' '.$row['firstName'];
         $_SESSION['photo']=$row['userPhoto'];
+        $_SESSION['pkCustomers'] = $row['pkCustomers'];
 
         header("Location:index.php");
     }else{

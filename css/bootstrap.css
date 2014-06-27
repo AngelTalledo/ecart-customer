@@ -1408,6 +1408,10 @@ table {
 th {
   text-align: left;
 }
+.tr-title{
+    color: #157fcc;
+    background-color: #157fcc;
+}
 .table {
   width: 100%;
   margin-bottom: 20px;
@@ -5832,3 +5836,7 @@ td.visible-print {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.center{
+    margin-left: 100%;
+}

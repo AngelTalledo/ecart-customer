@@ -259,116 +259,68 @@ if(!isset($_SESSION['US'])){ $User = true;}
 					<div class="body_shadow">
 						<div class="row">
 							<div class="col-md-3">
-								<div class="left_sidebar">
-									<div class="featured_title shop_title">
-										<h2 class="featured_header">			
-											<span>Categories</span>
-										</h2>
-									</div>
-									<div class="category_item">
-										<div class="panel-group panel_group_customize" id="accordion">
+                                <div class="left_sidebar">
+                                    <div class="featured_title shop_title">
+                                        <h2 class="featured_header">
+                                            <span>Categories</span>
+                                        </h2>
+                                    </div>
 
+                                    <div class="category_item">
+                                        <div class="panel-group panel_group_customize" id="accordion">
                                             <div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseOne" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseThree" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseFour" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									<div class="featured_title shop_title">
-										<h2 class="featured_header">			
-											<span>Pricing Filter</span>
-										</h2>
-									</div>
-									<div class="pricing_filter_area">
-										<div id="slider">
+                                                <div class="panel-heading panel_heading_customize">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href=#">
+                                                            <span class="pull-left plus"></span>
+                                                        </a>  <a href="shop.php?id=all"> Mostrar Todo</a>
 
-										</div>
-									</div>
-								</div>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            $objCategoria = new Class_CategoriaClass();
+                                            $resultMarca = $objCategoria->getIdCategoria();
+                                            while($rowMarca = $resultMarca->fetch_array()){
+                                                ?>
+                                                <div class="panel panel-default panel_customize">
+                                                    <div class="panel-heading panel_heading_customize">
+                                                        <h4 class="panel-title">
+                                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#<?php echo $rowMarca['nombreMarca']; ?>">
+                                                                <span class="pull-left plus"></span></a>
+                                                            <a href="shop.php?id=<?php echo $rowMarca['idMarca'];?>"> <?php echo $rowMarca['nombreMarca']; ?></a>
+
+                                                        </h4>
+                                                    </div>
+                                                    <div id="<?php echo $rowMarca['nombreMarca']; ?>" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="single_category_item">
+                                                                <ul>
+                                                                    <?php
+                                                                    $objCategoria = new Class_CategoriaClass();
+                                                                    $resultModelo = $objCategoria->getFkCategoria($rowMarca['idMarca']);
+                                                                    while($rowModelo = $resultModelo->fetch_array()){
+                                                                        ?>
+                                                                        <li><a href="shop-details.php?modelo=<?php echo $rowModelo['idModelo'];?>"><?php echo $rowModelo['nombreModelo'];?></a></li>
+                                                                    <?php } ?>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="featured_title shop_title">
+                                        <h2 class="featured_header">
+                                            <span>Pricing Filter</span>
+                                        </h2>
+                                    </div>
+                                    <div class="pricing_filter_area">
+                                        <div id="slider"></div>
+                                    </div>
+                                </div>
 							</div>
 							<!-- User Login Area -->
 							<div class="col-md-9 col-sm-12 col-xs-12">
@@ -386,9 +338,14 @@ if(!isset($_SESSION['US'])){ $User = true;}
 												?>
 												<span class="text-warning">Contraseña o Usuario Incorrecto</span>
 												<?php
-
 											}
+                                            if(isset($_GET['n']) and $_GET['n']==2){
+                                                ?>
+                                                <span class="text-warning">Iniciar sesion para comprar</span>
+                                        <?php
+                                            }
 										?>
+
                                       <form action="verificar_login.php" class="clearfix" method="post">
 											<div class="username">
 												<label>Usuario*</label>

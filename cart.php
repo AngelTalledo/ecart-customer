@@ -29,11 +29,13 @@ if(isset($_SESSION['carrito'])){
             $imagen="";
             $re = $objProducto->getListProductoId($_GET['id']);
             while ($f=$re->fetch_array()){
+                $id = $f['IdProducto'];
                 $nombre=$f['nombreMarca'] ." ". $f['nombreModelo'];
                 $precio=$f['precioVenta'];
                 $imagen=$f['ImagenProducto'];
             }
             $datosNuevos=array('Id'=>$_GET['id'],
+                'Id'=>$id,
                 'Nombre'=>$nombre,
                 'Precio'=>$precio,
                 'Imagen'=>$imagen,
@@ -51,11 +53,13 @@ if(isset($_SESSION['carrito'])){
         $imagen="";
         $re=$objProducto->getListProductoId($_GET['id']);
         while($f=$re->fetch_array()) {
+            $id = $f['IdProducto'];
             $nombre=$f['nombreMarca']." ".$f['nombreModelo'];
             $precio=$f['precioVenta'];
             $imagen=$f['ImagenProducto'];
         }
         $arreglo[]=array('Id'=>$_GET['id'],
+            'Id'=>$id,
             'Nombre'=>$nombre,
             'Precio'=>$precio,
             'Imagen'=>$imagen,
@@ -97,6 +101,7 @@ if(isset($_SESSION['carrito'])){
 		</script>
 		<script src="js/respond.js">
 		</script>
+
 		<![endif]-->
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
@@ -126,6 +131,8 @@ if(isset($_SESSION['carrito'])){
 		<link href="css/presets/preset1.css" rel="stylesheet" media="screen" id="layoutstyle">
 		<!-- responsive css -->
 		<link href="css/responsive.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
 		<header class="rox-header clearfix">
@@ -314,113 +321,68 @@ if(isset($_SESSION['carrito'])){
 					<div class="body_shadow">
 						<div class="row">
 							<div class="col-md-3">
-								<div class="left_sidebar">
-									<div class="featured_title shop_title">
-										<h2 class="featured_header">			
-											<span>Categories</span>
-										</h2>
-									</div>
-									<div class="category_item">
-										<div class="panel-group panel_group_customize" id="accordion">
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseOne" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseThree" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="panel panel-default panel_customize">
-												<div class="panel-heading panel_heading_customize">
-													<h4 class="panel-title">
-														<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-															<span class="pull-left plus"></span>
-															Toys & Games 
-														</a>
-													</h4>
-												</div>
-												<div id="collapseFour" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div class="single_category_item">
-															<ul>
-																<li><a href="#">New Games</a></li>
-																<li><a href="#">Mad Monkey</a></li>
-																<li><a href="#">Bad Cows</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									<div class="featured_title shop_title">
-										<h2 class="featured_header">			
-											<span>Pricing Filter</span>
-										</h2>
-									</div>
-									<div class="pricing_filter_area">
-										<div id="slider"></div>
-									</div>
-								</div>
+                                <div class="left_sidebar">
+                                    <div class="featured_title shop_title">
+                                        <h2 class="featured_header">
+                                            <span>Categories</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="category_item">
+                                        <div class="panel-group panel_group_customize" id="accordion">
+                                            <div class="panel panel-default panel_customize">
+                                                <div class="panel-heading panel_heading_customize">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href=#">
+                                                            <span class="pull-left plus"></span>
+                                                        </a>  <a href="shop.php?id=all"> Mostrar Todo</a>
+
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            $objCategoria = new Class_CategoriaClass();
+                                            $resultMarca = $objCategoria->getIdCategoria();
+                                            while($rowMarca = $resultMarca->fetch_array()){
+                                                ?>
+                                                <div class="panel panel-default panel_customize">
+                                                    <div class="panel-heading panel_heading_customize">
+                                                        <h4 class="panel-title">
+                                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#<?php echo $rowMarca['nombreMarca']; ?>">
+                                                                <span class="pull-left plus"></span></a>
+                                                            <a href="shop.php?id=<?php echo $rowMarca['idMarca'];?>"> <?php echo $rowMarca['nombreMarca']; ?></a>
+
+                                                        </h4>
+                                                    </div>
+                                                    <div id="<?php echo $rowMarca['nombreMarca']; ?>" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="single_category_item">
+                                                                <ul>
+                                                                    <?php
+                                                                    $objCategoria = new Class_CategoriaClass();
+                                                                    $resultModelo = $objCategoria->getFkCategoria($rowMarca['idMarca']);
+                                                                    while($rowModelo = $resultModelo->fetch_array()){
+                                                                        ?>
+                                                                        <li><a href="shop-details.php?modelo=<?php echo $rowModelo['idModelo'];?>"><?php echo $rowModelo['nombreModelo'];?></a></li>
+                                                                    <?php } ?>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="featured_title shop_title">
+                                        <h2 class="featured_header">
+                                            <span>Pricing Filter</span>
+                                        </h2>
+                                    </div>
+                                    <div class="pricing_filter_area">
+                                        <div id="slider"></div>
+                                    </div>
+                                </div>
 							</div>
 							<!-- Cart Area -->
 							<div class="col-md-9">
@@ -440,26 +402,27 @@ if(isset($_SESSION['carrito'])){
                                         $datos=$_SESSION['carrito'];
                                         $total=0;?>
 										<div class="table-responsive">
-											<table class="table table-bordered">
+											<table class="table table-bordered table-striped">
 												<tbody class="cart_product_table">
-												  <tr>
-													<td></td>
+                                                <caption> Detalle de Compra </caption>
+												  <tr class="tr-title">
+                                                    <td>#</td>
+													<td>Descripcion</td>
 													<td>producto</td>
 													<td>Precio</td>
 													<td>Cantidad</td>
-
 													<td>Sub Total</td>
 												  </tr>
                                                   <?php
                                                       for($i=0;$i<count($datos);$i++){
                                                      ?>
-												  <tr>
+												  <tr class="producto">
+                                                    <td><?php echo($i+1);?></td>
 													<td>
 														<div class="cart_item">
                                                             <a href="Imagenes/producto/<?php echo($datos[$i]['Imagen']);?>.png" class="prettyPhoto">
                                                                 <img src="Imagenes/producto/<?php echo($datos[$i]['Imagen']);?>.png" width="50px" height="50px" alt="" />
                                                             </a>
-
 														</div>
 													</td>
 													<td><?php echo $datos[$i]['Nombre'];?></td>
@@ -468,27 +431,18 @@ if(isset($_SESSION['carrito'])){
                                                         <input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
                                                                data-precio="<?php echo $datos[$i]['Precio'];?>"
                                                                data-id="<?php echo $datos[$i]['Id'];?>"
-                                                               class="cantidad">
-                                                        <a href="#"><i class="fa fa-refresh"></i></a> <a href="#"><i class="fa fa-plus fa-rotate-45"></i></a>
+                                                               class="cantidad quantity_update">
+                                                        <a href="#"><i class="fa fa-refresh"></i></a>
+                                                        <a href="#" class="eliminar" data-id="<?php echo $datos[$i]['Id'];?>"><i class="fa fa-plus fa-rotate-45"></i></a>
 													</td>
-													<td><?php echo $datos[$i]['Cantidad']*$datos[$i]['Precio'];?></td>
+													<td><span class="subtotal">S/.<?php echo $datos[$i]['Cantidad']*$datos[$i]['Precio'];?></span></td>
 												  </tr>
                                                       <?php
                                                       $total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;
-                                                  }
-
-                                                  }else{
-                                                      echo '<h2>No has añadido ningun producto</h2>';
-                                                  }
-                                                  echo '<h2 id="total">Total:'.$total.'</h2>';
-                                                  if($total!=0){
-                                                      echo '<center><a href="./compras/compras.php" class="aceptar">Comprar</a></center>';
-                                                  }
-
-                                                  ?>
+                                                  }?>
                                                 <tr>
-                                                    <td colspan="5"></td>
-                                                    <td></td>
+                                                    <td colspan="5"><span style="margin-left:90%; ">Total:</span></td>
+                                                    <td><span class="total_cart_price"> S/.<?php echo($total)?></span></td>
                                                 </tr>
 												</tbody>
 											</table>
@@ -497,7 +451,22 @@ if(isset($_SESSION['carrito'])){
 									</div>
 
 									<hr class="cart_hr"/>
-									
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <div class="navbar_header_area clearfix">
+                                            <div class="navbar-header">
+                                                <div class="logo center">
+                                                    <h1><a class="glyphicon glyphicon-ban-circle"> No hay Productos</a></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    }
+                                    if($total!=0){
+                                        echo '<a href="comprar.php" class="btn btn-primary btn-lg " style="margin-left:40%; "><span class="glyphicon glyphicon-credit-card">  Comprar</span></a>';
+                                    }
+                                    ?>
 								</div>
 							</div>
 						</div>
@@ -614,8 +583,8 @@ if(isset($_SESSION['carrito'])){
             </div>
         </footer> <!-- end footer section -->
 		<!-- footer bottom area -->
-		
-		
+
+
 		<!-- Core required JS files -->
 		<script src="js/jquery.js"></script>
 		<!-- bootstrap JS file -->

@@ -89,7 +89,6 @@ session_start();
                                 </div>
                             <?php }?>
 							<div class="phone_number">
-								<p>
 									<i class="fa fa-phone"></i> 000-123-456
 								</p>
 							</div>
@@ -106,7 +105,7 @@ session_start();
 								</form>
 							</div>
 							<div class="cart_amount pull-right">
-								<p><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
+								<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
 							</div>
 						</div>
 					</div>

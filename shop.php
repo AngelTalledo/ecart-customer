@@ -413,7 +413,7 @@ $cantidad=  ceil($cantidad);
         </div>
         <div class="featured_image">
             <a href="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" class="prettyPhoto">
-                <img src="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" alt="" width="200px" height="200px" />
+                <img src="Imagenes/producto/<?php echo $rowProducto['ImagenProducto'];?>.png" alt="" width="141px" height="px" />
             </a>
         </div>
         <div class="featured_content">

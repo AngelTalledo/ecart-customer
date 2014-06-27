@@ -1059,6 +1059,9 @@ padding-bottom:60px;
 /* Cart Area */
 .cart_area{
 }
+.voleta_area{
+    text-align: center;
+}
 .cart_login_area{
 }
 .cart_login_area p{
@@ -1169,6 +1172,7 @@ margin-left:-15px;
 .cart_details{
 }
 .cart_product_table{
+    text-align: center;
 }
 .cart_product_table tr{
 }

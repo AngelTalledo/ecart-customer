@@ -580,7 +580,7 @@
     </table>
     <table name="pedido" schema="" catalog="e-cart" type="TABLE">
       <column name="idPedido" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="fkStaff" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="fkCustomers" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="fechaPedido" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
       <column name="totalPedido" sqlType="DECIMAL" length="10" precision="0" nullable="false" jdbcType="3"/>
       <column name="fechaRegistro" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
@@ -597,8 +597,8 @@
       <column name="stock" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
       <column name="nuevo" sqlType="BIT" length="1" precision="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
       <column name="masVendido" sqlType="BIT" length="1" precision="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
-      <column name="descripcionProducto" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="CaracteristicasProducto" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="descripcionProducto" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="CaracteristicasProducto" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
       <column name="EspecificacionesProducto" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
       <column name="fechaRegistro" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
       <column name="stadoRegistro" sqlType="BIT" length="1" precision="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
@@ -5492,6 +5492,14 @@
       </prototype>
     </procedure>
     <procedure name="ecart_OverallPageProducto" schema="" catalog="e-cart" type="1"/>
+    <procedure name="ecart_addDetallePedido" schema="" catalog="e-cart" type="1">
+      <prototype>
+        <parameter name="INidPedido" sqlType="INT UNSIGNED" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="INidProducto" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="INcantidad" sqlType="INT UNSIGNED" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="3"/>
+        <parameter name="INsubtotal" sqlType="DECIMAL" length="10" precision="10" nullable="true" jdbcType="3" type="1" index="4"/>
+      </prototype>
+    </procedure>
     <procedure name="ecart_addDetalleProducto" schema="" catalog="e-cart" type="1">
       <prototype>
         <parameter name="p_idDetalleProducto" sqlType="INT UNSIGNED" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="1"/>
@@ -5541,6 +5549,12 @@
         <parameter name="InFkMenu" sqlType="VARCHAR" length="30" precision="30" nullable="true" jdbcType="12" type="1" index="2"/>
         <parameter name="InTextMenu" sqlType="VARCHAR" length="30" precision="30" nullable="true" jdbcType="12" type="1" index="3"/>
         <parameter name="InUrlMenu" sqlType="VARCHAR" length="30" precision="30" nullable="true" jdbcType="12" type="1" index="4"/>
+      </prototype>
+    </procedure>
+    <procedure name="ecart_add_pedido" schema="" catalog="e-cart" type="1">
+      <prototype>
+        <parameter name="INfkCustomers" sqlType="INT UNSIGNED" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="INtotalPedido" sqlType="DECIMAL" length="10" precision="10" nullable="true" jdbcType="3" type="1" index="2"/>
       </prototype>
     </procedure>
     <procedure name="ecart_addproducto" schema="" catalog="e-cart" type="1">
@@ -5661,6 +5675,11 @@
         <parameter name="InEstado" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="2"/>
       </prototype>
     </procedure>
+    <procedure name="ecart_getPkPedido" schema="" catalog="e-cart" type="1">
+      <prototype>
+        <parameter name="InPk" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="1"/>
+      </prototype>
+    </procedure>
     <procedure name="ecart_getSliderProducto" schema="" catalog="e-cart" type="1"/>
     <procedure name="ecart_get_ListMarca" schema="" catalog="e-cart" type="1">
       <prototype>
@@ -5734,6 +5753,12 @@
       <prototype>
         <parameter name="InValueFieldSearch" sqlType="VARCHAR" length="255" precision="255" nullable="true" jdbcType="12" type="1" index="1"/>
         <parameter name="InShowInactive" sqlType="TINYINT" length="3" precision="3" nullable="true" jdbcType="-6" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="ecart_updateStock" schema="" catalog="e-cart" type="1">
+      <prototype>
+        <parameter name="InStock" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="Inpk" sqlType="INT" length="10" precision="10" nullable="true" jdbcType="4" type="1" index="2"/>
       </prototype>
     </procedure>
     <procedure name="ecart_validate_Customers" schema="" catalog="e-cart" type="1">
