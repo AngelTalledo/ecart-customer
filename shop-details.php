@@ -81,7 +81,7 @@ if(!isset ($_GET['modelo'])){
                 <div class="navbar_header_area clearfix">
                     <div class="navbar-header">
                         <div class="logo">
-                            <h1><a href="index.html">E-CART</a> <span>Shopping Is Fun</span></h1>
+                            <h1><a href="index.php">E-CART</a> <span>Shopping Is Fun</span></h1>
                         </div>
                     </div>
                     <div class="header-right pull-right">
