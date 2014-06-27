@@ -109,7 +109,7 @@ if(!isset($_SESSION['US'])){ $User = true;}
 								</form>
 							</div>
 							<div class="cart_amount pull-right">
-									<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (2)</a></p>
+									<p><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart (0)</a></p>
 							</div>
 						</div>
 					</div>
